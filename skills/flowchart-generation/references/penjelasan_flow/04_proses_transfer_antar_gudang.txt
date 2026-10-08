@@ -1,0 +1,74 @@
+PROSES TRANSFER ANTAR GUDANG (PACKING LIST OUT & IN)
+Sistem: IBT One (Web Add-on), Integration Hub, SAP Business One
+Entitas SAP: StockTransfers (OData: Gudang Darat -> In-Transit -> Gudang Kapal)
+
+Aktor:
+1. Petugas Gudang Darat
+2. Tim Ekspedisi Laut (Pelayaran)
+3. Petugas Kapal
+4. Integration Hub
+5. SAP B1 Service Layer
+
+Catatan:
+Proses transfer logistik ini tidak menggunakan dokumen ITR (Inventory Transfer Request) dan tidak merekam tanda tangan fisik pada sistem, melainkan murni fokus pada pencatatan dokumen PL OUT, status In-Transit, dan PL IN di kapal.
+
+Alur Langkah Kerja:
+
+Mulai
+Kebutuhan pemindahan barang/sparepart dari Gudang Darat menuju Gudang Kapal di pelabuhan atau laut.
+
+1. Buat PL OUT
+Aktor: Petugas Gudang Darat
+Aksi: Buka menu Packing List OUT (PL OUT) di IBT One. Klik "Create New". Pilih kode Gudang Asal Darat dan pilih unit Kapal Tujuan.
+
+2. Input Header Ekspedisi
+Aktor: Petugas Gudang Darat
+Aksi: Masukkan parameter pengiriman laut: Nama Kapal, Nomor Voyage (pelayaran), Pelabuhan Muat, Pelabuhan Tujuan, Nama Ekspedisi, dan Nomor Resi pengiriman.
+
+3. Susun Rincian Koli
+Aktor: Petugas Gudang Darat
+Aksi: Susun paket pengiriman: tetapkan nomor koli (misal Box 1, Box 2), pilih item sparepart yang dimasukkan ke koli terkait, serta masukkan berat (kg) dan dimensi (CBM).
+
+4. Submit PL OUT
+Aktor: Petugas Gudang Darat & Sistem
+Aksi: Tekan tombol Submit. Sistem menerbitkan Nomor PL OUT dan membentuk payload data StockTransfers tahap pertama (pemindahan dari Gudang Darat ke Gudang Transit).
+
+5. Kirim Payload ke Hub
+Aktor: Sistem IBT One
+Aksi: Mengirimkan data PL OUT ke Integration Hub via REST API HTTPS POST.
+
+Integration Hub (PL OUT)
+Aktor: Service Integration Hub
+Aksi: Mengeksekusi transaksi Stock Transfer di SAP B1. Stok fisik di Gudang Darat berkurang dan dialihkan ke akun gudang In-Transit.
+
+6. Fase Pelayaran Transit
+Aktor: Tim Ekspedisi Laut & Sistem
+Aksi: Barang fisik berada dalam perjalanan ekspedisi laut menuju kapal. Sistem IBT One memantau status manifes pengiriman sebagai "In-Transit".
+
+7. Buka Dokumen PL IN
+Aktor: Petugas Kapal
+Aksi: Kapal sandar di pelabuhan tujuan. Petugas Kapal membuka menu Packing List IN (PL IN) di IBT One dan memanggil nomor dokumen referensi PL OUT pengirim.
+
+8. Input Kuantitas Diterima
+Aktor: Petugas Kapal
+Aksi: Petugas Kapal memeriksa fisik koli dan menginput jumlah koli serta kuantitas riil barang yang diterima di kapal.
+
+Decision: Kuantitas Sesuai?
+Kondisi verifikasi fisik koli terhadap manifes PL OUT:
+- Ada Selisih: Ditemukan koli rusak, hilang, atau kuantitas kurang. Alur dialihkan ke node "8b. Catat Selisih" di mana petugas mencatat kuantitas riil yang diterima beserta rincian selisih pada baris item. Alur lanjut ke langkah 9.
+- Lengkap / Sesuai: Kuantitas diterima utuh sesuai manifes. Alur langsung lanjut ke langkah 9.
+
+9. Submit PL IN & Payload
+Aktor: Petugas Kapal & Sistem
+Aksi: Petugas Kapal menekan tombol Submit. Sistem membentuk payload data StockTransfers tahap kedua (pemindahan dari Gudang Transit ke Gudang Kapal).
+
+Integration Hub (PL IN)
+Aktor: Service Integration Hub
+Aksi: Mengeksekusi transaksi Stock Transfer kedua di SAP B1. Stok dipindahkan dari Gudang In-Transit ke akun inventori aktif Gudang Kapal.
+
+10. PL IN Closed & Selesai
+Aktor: Sistem IBT One & SAP B1
+Aksi: Dokumen PL IN di IBT One berstatus "Closed". Stok barang resmi tercatat aktif pada inventori kapal dan siap digunakan untuk kebutuhan pemeliharaan.
+
+Selesai
+Siklus transfer antar gudang selesai.

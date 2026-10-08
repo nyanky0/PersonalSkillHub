@@ -1,0 +1,61 @@
+PROSES PENERIMAAN BARANG (GOODS RECEIPT PO)
+Sistem: IBT One (Web Add-on), Integration Hub, SAP Business One
+Entitas SAP: PurchaseDeliveryNotes (OData), PurchaseOrders
+
+Aktor:
+1. Petugas Gudang Darat
+2. Integration Hub
+3. SAP B1 Service Layer
+
+Catatan Lapangan:
+Pemeriksaan fisik barang, pencocokan surat jalan vendor, dan uji sampling mutu dilakukan secara fisik di lapangan sebelum data diinput ke dalam sistem IBT One.
+
+Alur Langkah Kerja:
+
+Mulai
+Barang fisik dari vendor tiba di lokasi gudang darat penampung.
+
+1. Copy From PO
+Aktor: Petugas Gudang Darat
+Aksi: Buka menu Goods Receipt PO (GRPO) di IBT One. Klik tombol "Copy From PO" dan pilih nomor dokumen PO acuan yang masih berstatus Open.
+
+2. Muat Open Kuantitas
+Aktor: Sistem IBT One
+Aksi: Sistem memuat data vendor, daftar item, satuan (UoM), dan sisa kuantitas terbuka (Open Quantity) dari PO acuan ke layar form GRPO.
+
+3. Input Qty & Gudang
+Aktor: Petugas Gudang Darat
+Aksi: Masukkan jumlah fisik aktual barang yang diterima pada baris item dan tetapkan kode gudang/bin penampung.
+
+Decision: Kuantitas Sesuai?
+Kondisi kuantitas fisik terhadap sisa Open PO:
+- Sesuai: Kuantitas fisik sama dengan Open PO. Alur langsung lanjut ke langkah 4 (Submit Dokumen GRPO).
+- Parsial: Kuantitas fisik lebih kecil dari Open PO. Alur masuk ke node "Parsial: Sesuaikan Qty" (sistem memproses kuantitas yang ada, sisa kuantitas tetap Open di PO untuk penerimaan berikutnya), lalu lanjut ke langkah 4.
+
+4. Submit Dokumen GRPO
+Aktor: Petugas Gudang Darat & Sistem
+Aksi: Tekan tombol Submit. Sistem memvalidasi bahwa kuantitas tidak melebihi Open PO, menyimpan transaksi, dan menerbitkan Nomor GRPO lokal.
+
+5. Siapkan Payload GRPO
+Aktor: Sistem IBT One
+Aksi: IBT One memetakan baris item GRPO menjadi skema payload JSON entitas OData "PurchaseDeliveryNotes" (termasuk referensi BaseType=22 dan BaseEntry PO).
+
+6. Kirim Payload ke Hub
+Aktor: Sistem IBT One
+Aksi: Mengirimkan payload dokumen GRPO ke Integration Hub melalui REST API HTTPS POST.
+
+Integration Hub
+Aktor: Service Integration Hub
+Aksi: Buffer Hub menampung data GRPO, memvalidasi sesi Service Layer, dan mengeksekusi OData POST ke SAP B1.
+
+7. GRPO Closed & Stok Masuk
+Aktor: Sistem IBT One & SAP B1
+Aksi: Dokumen GRPO resmi terbentuk di SAP B1. Efek data:
+- Stok fisik bertambah pada akun gudang darat.
+- Kuantitas terbuka pada PO asal terpotong otomatis.
+- Dokumen GRPO di IBT One dan SAP B1 berstatus "Closed".
+
+Decision: Tujuan Akhir Barang?
+Kondisi alokasi barang yang diterima:
+- Gudang Darat / HO: Barang dialokasikan untuk kebutuhan gudang darat/kantor pusat. Alur selesai pada node "Selesai (Stok Gudang Darat)".
+- Tujuan Kapal: Barang dialokasikan untuk kebutuhan armada kapal di laut. Alur diteruskan ke node "Lanjut ke Transfer Gudang (PL OUT ke Kapal)".

@@ -1,0 +1,57 @@
+PROSES PEMBATALAN & KOREKSI DOKUMEN (CANCEL PO / TRANS)
+Sistem: IBT One (Web Add-on), Integration Hub, SAP Business One
+Aksi OData: Cancel / Close Document Action
+
+Aktor:
+1. User Transaksi (Pemohon Pembatalan)
+2. Approver Pembatalan (Kepala Departemen / Manajemen)
+3. Integration Hub
+4. SAP B1 Service Layer
+
+Alur Langkah Kerja:
+
+Mulai
+Terjadi kebutuhan pembatalan dokumen transaksi (PO, GRPO, atau PL) akibat kekeliruan data, pembatalan sepihak oleh vendor, atau perubahan instruksi operasional.
+
+1. Buka Dokumen Transaksi
+Aktor: User Transaksi
+Aksi: Buka dokumen target yang hendak dibatalkan pada aplikasi web IBT One. Dokumen harus berstatus aktif (Open atau Submitted).
+
+2. Input Alasan Pembatalan
+Aktor: User Transaksi
+Aksi: Klik tombol "Request Cancel". Masukkan alasan pembatalan dokumen secara tertulis pada kolom deskripsi dan unggah memo/bukti persetujuan pembatalan.
+
+Decision: Ada Transaksi Lanjutan?
+Sistem memeriksa dependensi data pada database:
+- Ada Dokumen Hilir: Jika dokumen sudah menjadi acuan transaksi turunan (contoh: PO sudah ditarik menjadi GRPO, atau GRPO sudah diterbitkan A/P Invoice / Retur), sistem memicu node "Pembatalan Ditolak". Pembatalan langsung diblokir. User diwajibkan membatalkan atau mere-tur dokumen turunan terlebih dahulu secara bertahap.
+- Masih Open / Standalone: Dokumen tidak memiliki transaksi lanjutan aktif. Alur diizinkan berlanjut ke langkah 3.
+
+3. Submit Request Batal
+Aktor: User Transaksi & Approver
+Aksi: User men-submit pengajuan pembatalan. Sistem mengirimkan permohonan ke antrean approval Manajemen. Approver memverifikasi dan menyetujui pembatalan.
+
+4. Siapkan Payload Cancel
+Aktor: Sistem IBT One
+Aksi: IBT One membentuk payload instruksi OData action "Cancel" atau "Close" sesuai tipe dokumen target.
+
+5. Kirim Request ke Hub
+Aktor: Sistem IBT One
+Aksi: Mengirimkan instruksi pembatalan dokumen ke Integration Hub via REST API HTTPS POST.
+
+Integration Hub
+Aktor: Service Integration Hub
+Aksi: Menjalankan eksekusi OData Action `Cancel` pada entitas dokumen terkait di Service Layer SAP B1.
+
+6. Pemulihan Status SAP
+Aktor: SAP B1 Service Layer
+Aksi: SAP B1 memperbarui dokumen target:
+- Status dokumen berubah menjadi "Canceled" / "Closed".
+- Jurnal pembalik komitmen anggaran diposting otomatis.
+- Kuantitas terbuka (Open Quantity) pada dokumen pendahulu dipulihkan (contoh: jika PO dibatalkan, status open quantity pada RL asal kembali terbuka).
+
+7. Dokumen IBT Canceled
+Aktor: Sistem IBT One
+Aksi: Sistem IBT One menerima konfirmasi dari Hub, mengubah status dokumen lokal menjadi "Canceled", mencatat timestamp pembatalan, dan menyimpan log audit secara permanen.
+
+Selesai
+Proses pembatalan dokumen tuntas secara aman.

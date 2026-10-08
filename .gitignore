@@ -1,0 +1,29 @@
+# .gitignore for PersonalSkillHub
+
+# System & OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary & runtime caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+.tmp/
+temp/
+
+# Large Archives & Local System Backups
+agent_mindset_backups/
+skills_archive_niche/
+skills_backup_before_consolidation/
+
+# Node / JS environments (if any embedded in skills)
+node_modules/
+.npm/
+
+# IDE & Editor caches
+.vscode/
+.idea/
+*.swp
+*.bak

@@ -1,0 +1,50 @@
+PROSES SINKRONISASI MASTER DATA (SAP B1 -> IBT ONE)
+Sistem: IBT One (Web Add-on), Integration Hub, SAP Business One
+Entitas Master: Items, UnitOfMeasurementGroups, Warehouses, BinLocations
+
+Aktor:
+1. Admin Sistem / Cron Job Scheduler
+2. Integration Hub
+3. SAP B1 Service Layer
+
+Alur Langkah Kerja:
+
+Mulai
+Terjadi penambahan atau pembaruan master data di SAP B1 (barang baru, perubahan satuan UoM, penambahan gudang darat/kapal, atau penataan bin lokasi).
+
+1. Trigger Sinkronisasi
+Aktor: Admin Sistem atau Sistem Scheduler
+Aksi: Sinkronisasi dipicu melalui dua metode:
+- Manual: Admin membuka menu Settings -> SAP Config di IBT One dan menekan tombol "Sync Now".
+- Otomatis: Dijalankan berkala oleh Background Cron Job scheduler (misal setiap 6 jam).
+
+2. Tentukan Entitas Sync
+Aktor: Sistem IBT One
+Aksi: Tentukan target entitas yang akan disinkronisasikan (Item Master Data, UoM, Warehouses, atau Bin Locations). Sistem membaca stempel waktu sinkronisasi sukses terakhir (LastSyncTimestamp).
+
+3. Request Delta ke Hub
+Aktor: Sistem IBT One
+Aksi: IBT One mengirimkan HTTP GET Request ke Integration Hub dengan menyertakan parameter `LastSyncTimestamp` untuk meminta perubahan data secara inkremental (Delta Sync).
+
+Integration Hub
+Aktor: Service Integration Hub
+Aksi: Menerima request dan menjalankan kueri OData Service Layer ke SAP B1 dengan filter `$filter=UpdateDate ge datetime'...'` untuk mengekstraksi data yang berubah saja.
+
+4. Ekstraksi Data SAP
+Aktor: SAP B1 Service Layer & Hub
+Aksi: Service Layer SAP B1 mengembalikan dataset record master data baru dan termodifikasi ke buffer Integration Hub.
+
+5. Transformasi Skema JSON
+Aktor: Service Integration Hub
+Aksi: Hub memvalidasi skema data, melakukan konversi tipe data, dan memetakan field standar SAP serta User Defined Fields (UDF) ke dalam struktur JSON standar tabel IBT One.
+
+6. Batch Upsert IBT One
+Aktor: Sistem IBT One
+Aksi: IBT One menerima aliran batch JSON dari Hub, lalu mengeksekusi operasi database `upsert` (Update jika kode entitas sudah ada di database lokal, Insert jika belum ada).
+
+7. Simpan Audit Log Sync
+Aktor: Sistem IBT One
+Aksi: Sistem mencatat hasil eksekusi ke tabel audit log: total record yang berhasil di-upsert, pesan error jika ada kegagalan baris, dan memperbarui nilai `LastSyncTimestamp`.
+
+Selesai
+Master data pada aplikasi web IBT One telah sinkron dengan master data SAP B1.

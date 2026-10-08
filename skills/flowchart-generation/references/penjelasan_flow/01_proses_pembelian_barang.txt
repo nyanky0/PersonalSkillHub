@@ -1,0 +1,85 @@
+PROSES PEMBELIAN BARANG (PROCURE-TO-PAY)
+Sistem: IBT One (Web Add-on), Integration Hub, SAP Business One
+Entitas SAP: PurchaseOrders (OData), PurchaseQuotations, Requisition List
+
+Aktor:
+1. User Pemohon (Crew Kapal / Staf Darat)
+2. Approver RL & PQC (Kepala Departemen / Manajemen)
+3. Staf Purchasing
+4. Integration Hub
+5. SAP B1 Service Layer
+
+Alur Langkah Kerja:
+
+Mulai
+Inisiasi permohonan pengadaan barang atau jasa operasional.
+
+1a. Buat RL Manual
+Aktor: User Pemohon
+Aksi: Buka menu Request List (RL) di IBT One. Klik tombol "Create New". Pilih unit kapal peminta, lokasi kerja, dan tanggal estimasi kebutuhan barang secara manual.
+
+1b. RL dari Katalog
+Aktor: User Pemohon
+Aksi: Buka menu Sparepart Catalog di web IBT One. Cari sparepart berdasarkan part number atau hierarki mesin. Pilih item, tentukan kuantitas, dan klik tombol "Add to RL" / "Create RL from Catalog".
+
+2. Input Detail Item
+Aktor: User Pemohon
+Aksi: Lengkapi baris item: kuantitas, satuan (UoM), nomor referensi part, deskripsi teknis, dan tingkat urgensi. Unggah lampiran pendukung (foto kerusakan part atau lembar spesifikasi teknis).
+
+3. Submit Dokumen RL
+Aktor: User Pemohon & Sistem
+Aksi: Tekan tombol Submit. Sistem memvalidasi kelengkapan field wajib, mengunci baris input, dan menerbitkan Nomor Dokumen RL otomatis. Status dokumen berubah menjadi "Submitted".
+
+Decision: Approved?
+Kondisi evaluasi persetujuan RL:
+- Tidak: Sistem mengirim notifikasi perbaikan ke pemohon via notifikasi web. Alur berpindah ke node "Revisi / Ditolak", lalu kembali ke langkah 2 (Input Detail Item).
+- Ya: Status RL berubah menjadi "Approved". Alur berlanjut ke pemilihan tipe pengadaan.
+
+Decision: Tipe Pengadaan?
+Kondisi cabang proses pembelian:
+- Cabang A (Reguler / Tender Vendor): Melalui alur kuotasi harga vendor (langkah 4, 5, 6, 7, 8).
+- Cabang B (Direct PO): Untuk kategori khusus tanpa tender (langkah 4b).
+
+Alur Cabang Reguler (PQ):
+4. Export Excel RL
+Aktor: Staf Purchasing
+Aksi: Buka RL berstatus "Approved". Klik tombol "Export to Excel". Sistem men-download file template Excel berisi daftar item RL untuk dibagikan ke vendor calon penyedia (Request for Quotation / RFQ).
+
+5. Upload Excel ke Web
+Aktor: Staf Purchasing
+Aksi: Masukkan data penawaran harga dari para vendor ke dalam template Excel. Buka menu Purchase Quotation di IBT One, klik tombol "Import / Upload Quotation Excel", lalu unggah file tersebut.
+
+6. Create PQ dari Excel
+Aktor: Sistem IBT One
+Aksi: Sistem mem-parsing data Excel hasil upload. Sistem menerbitkan dokumen Purchase Quotation (PQ) terpisah untuk setiap vendor yang memberikan penawaran harga.
+
+7. Analisa PQC & Approval
+Aktor: Staf Purchasing & Approver Manajemen
+Aksi: Buka menu Purchase Quotation Comparison (PQC). Sistem menampilkan matriks perbandingan harga, tempo pembayaran (TOP), dan jadwal pengiriman antar vendor. Staf purchasing menandai rekomendasi vendor pemenang. Approver memverifikasi dan menyetujui PQC.
+
+8. Generate PO Final
+Aktor: Sistem IBT One
+Aksi: Berdasarkan vendor pemenang yang disetujui di PQC, sistem otomatis membentuk draft dokumen Purchase Order (PO) Final dengan harga dan vendor terpilih.
+
+Alur Cabang Direct PO:
+4b. Direct PO (EPDA / Work Order / Kontrak)
+Aktor: Staf Purchasing
+Aksi: Untuk transaksi non-tender (EPDA / biaya agen pelabuhan, Work Order perbaikan kapal, atau PO barang berbasis kontrak payung), user membuka menu PO dan memilih "Create Direct PO". User wajib mengisi Nomor Kontrak / SPK acuan.
+
+Integrasi & Sinkronisasi SAP:
+9. Kirim Payload PO
+Aktor: Sistem IBT One
+Aksi: IBT One merangkum data header dan baris item PO menjadi payload JSON OData entitas "PurchaseOrders". Sistem mengirimkan payload ke endpoint Integration Hub via HTTPS POST.
+
+Integration Hub
+Aktor: Service Integration Hub
+Aksi: Hub menerima payload, mencatatnya pada Ingestion Buffer, memvalidasi pemetaan field, lalu memanggil Service Layer SAP B1.
+
+10. PO Released & Sync SAP
+Aktor: Sistem IBT One & SAP B1
+Aksi: SAP B1 menerbitkan dokumen PO resmi. Status sinkronisasi:
+- PO Barang (Reguler): Status menjadi "Released / Open" di SAP dan IBT One, siap ditarik ke dokumen penerimaan (GRPO).
+- PO Jasa / EPDA / Work Order: Berdiri sendiri tanpa GRPO fisik. Status PO langsung disinkronisasi menjadi "Closed" saat tim Finance membukukan A/P Invoice di SAP B1.
+
+Selesai
+Siklus pengadaan barang/jasa selesai tercatat di sistem.

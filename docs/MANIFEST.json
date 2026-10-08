@@ -1,0 +1,1097 @@
+{
+  "hub": "D:\\SkillHub\\skills",
+  "generated": "2026-10-07 11:18:05",
+  "count": 218,
+  "skills": [
+    {
+      "name": "agent-reach",
+      "description": "Universal internet & web access routing engine for AI agents. One-click access across 15+ platforms (Web, X/Twitter, GitHub, YouTube, Reddit, XiaoHongShu, LinkedIn, Bilibili, RSS) via ordered primary and fallback channels without wrapper bloat.",
+      "changed": "2026-10-07 11:17"
+    },
+    {
+      "name": "agent-skill-sync",
+      "description": "Use to sync agent skills across Hermes, Cline, Gemini.",
+      "changed": "2026-09-03 15:53"
+    },
+    {
+      "name": "agent-skills-install",
+      "description": "Install agent skills from GitHub into Hermes, Cline, Gemini.",
+      "changed": "2026-09-03 16:12"
+    },
+    {
+      "name": "agentic",
+      "description": "Conversational AI-first interface with minimal controls, clear outcomes, and delegated task flows for agentic workflows.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "ai-agent-brain",
+      "description": "Unified AI Agent Brain & Master Engineering Core. Synthesizes Dual-Layer Engine (Miku-chan Kawaii Persona + Titanium Principal Architect Mind), Karpathy Engineering Discipline, Anti-AI Slop Writing, Ruflow Triad Pattern, Token Efficiency, and Enterprise Security.",
+      "changed": "2026-09-18 17:37"
+    },
+    {
+      "name": "ai-slop-audit",
+      "description": "Advanced AI-slop audit — batch image validation, slop pattern detection, CSS analysis, CTA integrity, auto-report generation.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "airtable",
+      "description": "Airtable REST API via curl. Records CRUD, filters, upserts.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "animejs",
+      "description": "Implement performant JavaScript web animations, timelines, and SVG morphing with Anime.js.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "antfu-web-design-guidelines",
+      "description": "Review UI code for Web Interface Guidelines compliance, accessibility, and UX consistency.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "anti-ai-slop",
+      "description": "Unified Anti-Slop Master Engine (Prose, Copywriting, UI/Visual, Code Comments, WCAG Human Accessibility, & Mobile Reflow). Synthesizes anti-ai-slop, anti-ai-slop-writing, and github.com/miqdadbadjuber/anti-slop (antislop, antislop-copywriting, antislop-ui, antislop-code, antislop-human, antislop-layoutmobile).",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "anti-ai-slop-writing",
+      "description": "Draft authentic prose and UI copywriting avoiding formulaic AI writing patterns, clichés, parataxis, and template headlines. Blended with github.com/miqdadbadjuber/anti-slop (antislop-copywriting).",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "antigravity-ide-skills",
+      "description": "Install/sync/verify Antigravity IDE skills.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "antigravity-workflow",
+      "description": "Use when integrating Hermes with Antigravity IDE or agy CLI.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "antislop",
+      "description": "Anti Slop: Rules for AI Coding Agents. The core filter. Load always to stop generic AI slop.",
+      "changed": "2026-10-01 15:40"
+    },
+    {
+      "name": "antislop-code",
+      "description": "Code comment hygiene for AI coding agents: remove generic AI-slop comments, keep the valuable ones, never touch the code.",
+      "changed": "2026-10-01 15:40"
+    },
+    {
+      "name": "antislop-copywriting",
+      "description": "Copy and text skill for antislop. Use when writing or editing prose: headlines, tone, CTAs, and anti-AI-writing patterns. Load with the core.",
+      "changed": "2026-10-01 15:40"
+    },
+    {
+      "name": "antislop-human",
+      "description": "Human and accessibility skill for antislop. Contrast, keyboard, focus, and states for real people. Includes the contrast checker.",
+      "changed": "2026-10-01 15:40"
+    },
+    {
+      "name": "antislop-layoutmobile",
+      "description": "Mobile layout skill for antislop. Use for layouts that reflow across screen sizes, phone to desktop: grids, overflow, tap targets. Load with the core.",
+      "changed": "2026-10-01 15:40"
+    },
+    {
+      "name": "antislop-ui",
+      "description": "UI and visual skill for antislop. Use when building or editing any interface: color, layout, components, motion. Load with the core.",
+      "changed": "2026-10-01 15:40"
+    },
+    {
+      "name": "api-documentation-generator",
+      "description": "Generate developer-friendly API documentation, parameters, and examples from code.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "api-gateway",
+      "description": "Maton API gateway integration for third-party OAuth and credential-managed API calls.",
+      "changed": "2026-09-03 15:53"
+    },
+    {
+      "name": "apple-notes",
+      "description": "Manage Apple Notes via memo CLI: create, search, edit.",
+      "changed": "2026-09-23 16:45"
+    },
+    {
+      "name": "apple-reminders",
+      "description": "Apple Reminders via remindctl: add, list, complete.",
+      "changed": "2026-09-23 16:45"
+    },
+    {
+      "name": "architecture-diagram",
+      "description": "Dark-themed SVG architecture/cloud/infra diagrams as HTML.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "arxiv",
+      "description": "Search arXiv papers by keyword, author, category, or ID.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "ascii-art",
+      "description": "ASCII art: pyfiglet, cowsay, boxes, image-to-ascii.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "ascii-video",
+      "description": "ASCII video: convert video/audio to colored ASCII MP4/GIF.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "background-services",
+      "description": "Hosted services, background jobs, outbox patterns, and graceful shutdown in ASP.NET Core.",
+      "changed": "2026-09-03 16:12"
+    },
+    {
+      "name": "banner-design",
+      "description": "Design creative ad banners, website hero visuals, and social media graphic assets.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "baoyu-infographic",
+      "description": "Infographics: 21 layouts x 21 styles (信息图, 可视化).",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "blocked-page-recovery",
+      "description": "Recover blocked/paywalled/WAF'd pages via fallbacks.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "blogwatcher",
+      "description": "Monitor blogs and RSS/Atom feeds via blogwatcher-cli tool.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "box",
+      "description": "Box manages cloud files, sharing, search, and metadata.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "brainstorming",
+      "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "brand",
+      "description": "Brand voice, visual identity, messaging frameworks, asset management, brand consistency.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "brandkit",
+      "description": "Design high-end brand identity systems, logo guidelines, and presentation decks.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "capacitor-mobile-app",
+      "description": "Build Capacitor + Vue 3 + SQLite mobile apps (Android APK).",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "caveman-suite",
+      "description": "Ultra-compressed communication and review mode cutting output tokens while preserving technical accuracy.",
+      "changed": "2026-09-18 17:37"
+    },
+    {
+      "name": "cf-router-api-testing",
+      "description": "Use when testing or wiring CF Router (cfrouter) models. Direct API checks, catalog facts, quota multiples.",
+      "changed": "2026-10-01 15:40"
+    },
+    {
+      "name": "chm-docs-corpus",
+      "description": "Extract .chm docs into a queryable skill corpus.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "claude",
+      "description": "A research-journal aesthetic printed on warm stone — authoritative, editorial, almost achromatic.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "claude-code",
+      "description": "Delegate coding to Claude Code CLI (features, PRs).",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "claude-design",
+      "description": "Design one-off HTML artifacts (landing, deck, prototype).",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "claude-mem",
+      "description": "",
+      "changed": "2026-10-06 12:09"
+    },
+    {
+      "name": "cline-custom-endpoint-setup",
+      "description": "Configures a custom API endpoint in Cline on Windows.",
+      "changed": "2026-09-09 09:48"
+    },
+    {
+      "name": "codebase-architecture-analysis",
+      "description": "Use when explaining an unfamiliar application codebase.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "codebase-design",
+      "description": "Design deep modules, clean seams, and AI-navigable software interfaces.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "codebase-inspection",
+      "description": "Inspect codebases w/ pygount: LOC, languages, ratios.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "codex",
+      "description": "Delegate coding to OpenAI Codex CLI (features, PRs).",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "comfyui",
+      "description": "Generate images, video, and audio via diffusion workflows.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "competitor-news-monitor",
+      "description": "Watch named companies for material news; cited digests.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "computer-use",
+      "description": "Drive the desktop background-first; escalate on signal.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "concise-fdd-writing",
+      "description": "Ultra-concise, crystal-clear, anti-AI-slop technical documentation and FDDs. Consolidated into enterprise-fdd-master.",
+      "changed": "2026-09-25 17:39"
+    },
+    {
+      "name": "corporate-flowchart-architect",
+      "description": "Master architectural standard for Soltius Corporate Draw.io & FDD Process Flowcharts. Enforces zero-hallucination, strict integer sequential numbering (1..N), decision node blending, semantic mxGraph shapes, Soltius visual styling (#4F88BB), and 4-layer parity (diagram, narrative, FDD script, code).",
+      "changed": "2026-09-23 15:50"
+    },
+    {
+      "name": "deep-prompt-specification",
+      "description": "Author comprehensive, ultra-detailed agentic coding prompts and task specifications blending empirical evidence, strict negative constraints, deep schema definitions, and automated verification loops.",
+      "changed": "2026-09-23 13:04"
+    },
+    {
+      "name": "design",
+      "description": "Full design intelligence: brand identity, UI styling, banners, presentations, and design tokens.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "design-md",
+      "description": "Author/validate/export Google's DESIGN.md token spec files.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "design-system",
+      "description": "Token architecture, component specifications, and slide generation.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "diagnosing-bugs",
+      "description": "Diagnosis loop for hard bugs and performance regressions. Use when the user says \"diagnose\"/\"debug this\", or reports something broken/throwing/failing/slow.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "diagram-pixel-analysis",
+      "description": "Reverse-engineer diagram style via pixels, no vision needed.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "dispatching-parallel-agents",
+      "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "docker-management",
+      "description": "Manage Docker containers, images, multi-stage builds, and Docker Compose services.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "document-to-action-items",
+      "description": "Extract cited obligations, deadlines, decisions, and action items from documents.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "docx",
+      "description": "Create, read, edit, template, and review Word .docx files.",
+      "changed": "2026-09-23 16:45"
+    },
+    {
+      "name": "dogfood",
+      "description": "Exploratory QA of web apps: find bugs, evidence, reports.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "dotnet-csharp-master",
+      "description": "Master .NET & C# Enterprise Suite. Modern C# 12, ASP.NET Core, Akka.NET actor systems, REST vs gRPC vs SignalR architecture, and clean patterns.",
+      "changed": "2026-09-18 17:37"
+    },
+    {
+      "name": "drawio-skill",
+      "description": "Create, edit, synchronize, inspect, test, and publish editable draw.io diagrams. Use when the user explicitly requests draw.io/diagrams.net, needs a polished architecture, ERD, UML, sequence, C4, SysML, BPMN, network, swimlane, ML, or infrastructure diagram, wants code/IaC/SQL/OpenAPI/AsyncAPI/Protobuf/GraphQL converted into a diagram, or wants an existing diagram queried, reviewed, diffed, restyled, kept in sync, or made interactive. Prefer Mermaid/PlantUML elsewhere when the requested artifact is diagrams-as-code rather than an editable draw.io file.",
+      "changed": "2026-09-22 16:22"
+    },
+    {
+      "name": "email-inbox-triage",
+      "description": "Triage an inbox: prioritize threads, draft replies safely.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "enterprise-fdd-master",
+      "description": "Unified Master Suite for engineering enterprise Functional Design Documents (FDD) for SAP Business One & Web Add-on integrations. Consolidates fdd-generation-workflow, sap-b1-fdd-author, concise-fdd-writing, and validation-trigger-analyzer with zero-hallucination, 4-tier parity, Soltius flowchart standards (#4F88BB), Black Table styling, validation code taxonomy, and Bab 4 UI patent standard (Desktop & Mobile pairing, ruler 0.63cm/1.27cm, bold/italic captions).",
+      "changed": "2026-09-23 16:44"
+    },
+    {
+      "name": "enterprise-web-blueprint",
+      "description": "Architect data-dense enterprise B2B web applications with robust patterns.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "evaluating-llms-harness",
+      "description": "Benchmark LLMs with lm-eval-harness on MMLU, GSM8K, and standard benchmarks.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "excalidraw",
+      "description": "Hand-drawn Excalidraw JSON diagrams (arch, flow, seq).",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "executing-plans",
+      "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "fdd-generation-workflow",
+      "description": "Generate FDD docx from codebases. Consolidated into enterprise-fdd-master.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "find-skills",
+      "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", o...",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "findmy",
+      "description": "Track Apple devices/AirTags via FindMy.app on macOS.",
+      "changed": "2026-09-23 16:45"
+    },
+    {
+      "name": "finishing-a-development-branch",
+      "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "flowchart-generation",
+      "description": "QA matplotlib flowcharts via geometry audit, not vision.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "frontend-conditional-edits",
+      "description": "Use when editing JSX conditions. Verify scope and build.",
+      "changed": "2026-10-06 12:09"
+    },
+    {
+      "name": "frontend-design",
+      "description": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "frontend-implementation",
+      "description": "Build and verify production web UI pages, components, and layout responsiveness.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "gif-search",
+      "description": "Search/download GIFs from Tenor via curl + jq.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "github-master-workflow",
+      "description": "Master Git & GitHub Lifecycle Suite. Complete automation and best practices for gh CLI, PR reviews, branch management, issue triage, git wor...",
+      "changed": "2026-09-18 17:37"
+    },
+    {
+      "name": "google-workspace",
+      "description": "Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "grill-me",
+      "description": "A relentless interview to sharpen a plan or design.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "grounded-citations",
+      "description": "Ground answers and documents in cited, verifiable sources.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "guitar-chords",
+      "description": "Guitar chords / kunci gitar / chord book PDF requests.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "hermes-agent",
+      "description": "Use, configure, theme, extend, and orchestrate Hermes Agent.",
+      "changed": "2026-09-23 16:45"
+    },
+    {
+      "name": "hermes-agent-suite",
+      "description": "Comprehensive Hermes Agent orchestration, theming, custom pets, token optimization, and subprocess CLI management.",
+      "changed": "2026-09-18 17:37"
+    },
+    {
+      "name": "hermes-mcp-integration",
+      "description": "Use when adding MCP servers to Hermes. Verify health.",
+      "changed": "2026-10-06 12:09"
+    },
+    {
+      "name": "hermes-skill-auto-sync",
+      "description": "Sync any new Hermes skill to Cline, Gemini, and SkillHub.",
+      "changed": "2026-09-04 16:43"
+    },
+    {
+      "name": "himalaya",
+      "description": "Himalaya CLI: IMAP/SMTP email from terminal.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "huggingface-hub",
+      "description": "HuggingFace hf CLI: search/download/upload models, datasets.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "humanizer",
+      "description": "Humanize AI-generated text, strip promotional clichés, and restore authentic voice.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "i-have-adhd",
+      "description": "Shape output for a reader with ADHD: lead with the next action, number multi-step work, restate state across turns, suppress tangents, give specific time estimates, make wins visible. Invoke with /i-have-adhd; stays on until \"stop adhd mode\".",
+      "changed": "2026-10-07 10:15"
+    },
+    {
+      "name": "imagegen-frontend-mobile",
+      "description": "Generate mobile app UI screen concepts, flows, and native mobile layout references.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "imagegen-frontend-web",
+      "description": "Generate section-by-section frontend landing page design references and art direction.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "imessage",
+      "description": "Send and receive iMessages/SMS via the imsg CLI on macOS.",
+      "changed": "2026-09-23 16:45"
+    },
+    {
+      "name": "impeccable",
+      "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers websites, landing pages, dashboards, product UI, app shells, components, forms, settings, onboarding, and empty states. Handles UX review, visual hierarchy, information architecture, cognitive load, accessibility, performance, responsive behavior, theming, anti-patterns, typography, fonts, spacing, layout, alignment, color, motion, micro-interactions, UX copy, error states, edge cases, i18n, and reusable design systems or tokens. Also use for bland designs that need to become bolder or more delightful, loud designs that should become quieter, live browser iteration on UI elements, or ambitious visual effects that should feel technically extraordinary. Not for backend-only or non-UI tasks.",
+      "changed": "2026-10-07 11:17"
+    },
+    {
+      "name": "improve-codebase-architecture",
+      "description": "Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "inertia-payload-budget",
+      "description": "Use when an Inertia page payload is too heavy to ship.",
+      "changed": "2026-09-23 16:45"
+    },
+    {
+      "name": "inspecting-hermes-desktop-dom",
+      "description": "Read the live Hermes desktop DOM/CSS over CDP.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "invitation-web-pattern",
+      "description": "Use when building undangan-style landing or portfolio pages.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "javascript",
+      "description": "Write, debug, and optimize modern JavaScript (ES2023+), async event loop, and Node APIs.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "karpathy-guidelines",
+      "description": "Behavioral guidelines to reduce common LLM coding mistakes.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "landing-page-conversion-audit",
+      "description": "Audit landing and checkout pages for conversion leaks and high-impact CRO improvements.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "laravel-fullstack-suite",
+      "description": "Master Laravel & PHP Fullstack Engineering Suite.",
+      "changed": "2026-09-18 17:37"
+    },
+    {
+      "name": "laravel-landing-pages",
+      "description": "Build/polish Laravel landing pages; deploy to Vercel.",
+      "changed": "2026-09-23 16:45"
+    },
+    {
+      "name": "laravel-sap-b1-integration",
+      "description": "Use when a Laravel app syncs SAP B1 via Service Layer.",
+      "changed": "2026-09-11 11:16"
+    },
+    {
+      "name": "lazy-dev",
+      "description": "Enforce minimal, simplest possible implementation with zero bloated abstractions.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "live-transcription",
+      "description": "Live meeting transcription: mic + Whisper (WSL→Windows).",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "live-vps-deploy",
+      "description": "Deploy fixed app versions to live production VPS safely.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "llama-cpp",
+      "description": "llama.cpp local GGUF inference + HF Hub model discovery.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "llm-router-gateway-setup",
+      "description": "Use when wiring a local LLM router gateway (combos, keys).",
+      "changed": "2026-09-15 10:07"
+    },
+    {
+      "name": "llm-wiki",
+      "description": "Build and maintain an interconnected markdown knowledge base using Karpathy's LLM Wiki protocol.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "local-web-tool-bridge",
+      "description": "Bridge a browser web tool to a local CLI agent/process.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "logfare",
+      "description": "Use when integrating the Logfare free API gateway.",
+      "changed": "2026-09-14 16:11"
+    },
+    {
+      "name": "manim-video",
+      "description": "Manim CE animations: 3Blue1Brown math/algo videos.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "maps",
+      "description": "Geocode, POIs, routes, timezones via OpenStreetMap/OSRM.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "mcp-integration",
+      "description": "Integrate MCP servers in Hermes. Fix version conflicts.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "mediapipe-computer-vision",
+      "description": "MediaPipe Tasks + OpenCV for real-time landmark detection.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "meeting-action-items",
+      "description": "Turn meeting notes into cited decisions, owners, tickets, and follow-ups.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "meeting-notes",
+      "description": "Use when tidying raw meeting notes into minutes docx.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "mnemosyne-mastery",
+      "description": "Use when Mnemosyne recall is empty or DB corrupt.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "mobile-design",
+      "description": "Mobile-first responsive design, thumb-friendly touch targets, and adaptive layouts.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "multi-agent-workflows",
+      "description": "Build 9Router multi-agent pipelines with FastAPI + SSE UI.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "node-inspect-debugger",
+      "description": "Debug Node.js via --inspect + Chrome DevTools Protocol CLI.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "notion",
+      "description": "Interact with Notion databases, pages, blocks, and markdown exports via API.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "obsidian",
+      "description": "Read, search, create, and organize markdown notes in an Obsidian Second Brain vault.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "office-docx-master",
+      "description": "Master Microsoft Word (.docx) document generation and surgical editing via python-docx and docx-js.",
+      "changed": "2026-09-18 17:37"
+    },
+    {
+      "name": "office-pdf-master",
+      "description": "Master PDF reading, text editing in-place, merging, and OCR extraction via PyMuPDF and pdfplumber.",
+      "changed": "2026-09-18 17:37"
+    },
+    {
+      "name": "office-xlsx-master",
+      "description": "Master Excel (.xlsx) headless workbook authoring, auditing, and formula generation via openpyxl.",
+      "changed": "2026-09-18 17:37"
+    },
+    {
+      "name": "openapi-spec-generation",
+      "description": "Author, maintain, and validate OpenAPI 3.1 specifications and contract tests.",
+      "changed": "2026-09-03 15:53"
+    },
+    {
+      "name": "openapi-to-application-code",
+      "description": "Generate production-ready application scaffolding and models from OpenAPI specs.",
+      "changed": "2026-09-03 15:53"
+    },
+    {
+      "name": "opencode",
+      "description": "Delegate coding to OpenCode CLI (features, PR review).",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "p5js",
+      "description": "p5.js sketches: gen art, shaders, interactive, 3D.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "performance-optimization",
+      "description": "Optimize frontend, backend, queries, and database performance; fix N+1 queries.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "plan",
+      "description": "Write a markdown plan to .hermes/plans/; no execution.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "ponytail-suite",
+      "description": "Ponytail code review and technical debt auditing framework for surgical refactoring.",
+      "changed": "2026-09-18 17:37"
+    },
+    {
+      "name": "popular-web-designs",
+      "description": "54 real design systems (Stripe, Linear, Vercel) as HTML/CSS.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "powerpoint",
+      "description": "Create, read, edit .pptx decks with python-pptx.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "prd-framework",
+      "description": "Use when turning raw prompts into PRDs and agent packs.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "pre-existing-failure-triage",
+      "description": "Use when tests fail and you must find your own regressions.",
+      "changed": "2026-09-11 11:16"
+    },
+    {
+      "name": "premium-scroll-animations",
+      "description": "Scroll animations: Lenis, blur-reveal, split-line, parallax.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "pretext",
+      "description": "Build creative browser demos with DOM-free text layout.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "print-design",
+      "description": "HTML to PDF print artifacts. Use for menus and flyers.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "prism-suite",
+      "description": "Prism multi-pass structural analysis with adversarial self-correction for complex codebases.",
+      "changed": "2026-09-18 17:37"
+    },
+    {
+      "name": "product-price-monitor",
+      "description": "Watch product, flight, or listing prices; alert on target.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "professional",
+      "description": "Polished, business-ready design with modern typography, structured layouts, and a trustworthy visual identity.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "project-documentation-maintenance",
+      "description": "Use when reconciling repository docs with software behavior.",
+      "changed": "2026-10-07 11:17"
+    },
+    {
+      "name": "prompt-master",
+      "description": "Generate high-precision, token-efficient prompts for LLMs and coding agents.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "python-debugpy",
+      "description": "Debug Python: pdb REPL + debugpy remote (DAP).",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "react",
+      "description": "React performance optimization: hooks, re-renders, state management, and Suspense patterns.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "realtime-webcam-cv",
+      "description": "Webcam CV effects via MediaPipe WASM + Canvas.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "receiving-code-review",
+      "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requir...",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "redesign-skill",
+      "description": "Upgrades existing websites and apps to premium quality.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "reliable-code-file-edits",
+      "description": "Edit code files without dropped-paren syntax breakage.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "render-html-to-image",
+      "description": "Use when rendering an HTML mockup or page to a PNG image.",
+      "changed": "2026-09-11 11:16"
+    },
+    {
+      "name": "requesting-code-review",
+      "description": "Pre-commit review: security scan, quality gates, auto-fix.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "research-paper-writing",
+      "description": "Write ML papers for NeurIPS/ICML/ICLR: design→submit.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "run-local-web-app",
+      "description": "Use when asked to run a local app: serve it and verify.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "safe-code-authoring",
+      "description": "Use when writing code via agent tools; empty parens strip.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "sap-b1-fdd-author",
+      "description": "Generate standard Soltius FDD documentation from SAP B1 source code and DB schemas. Consolidated into enterprise-fdd-master.",
+      "changed": "2026-09-04 10:27"
+    },
+    {
+      "name": "sap-b1-integration-mapper",
+      "description": "Use when documenting SAP Business One (SAP B1) integration — Service Layer / OData endpoints, HTTPS calls, B1SESSION/ROUTEID session handling, payl...",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "sap-b1-suite",
+      "description": "Master SAP Business One SDK & Integration Suite.",
+      "changed": "2026-10-01 11:13"
+    },
+    {
+      "name": "sap-b1-udt-udf-schema-extractor",
+      "description": "Extract and document UDT/UDF metadata and SQL/HANA schemas from SAP B1 databases.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "sap-b1-ui-addon",
+      "description": "SAP Business One UI API add-on skill (SAPbouiCOM, 212 objects).",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "sap-b1-validation-trigger-analyzer",
+      "description": "Analyze SAP B1 business validation rules and SP_TransactionNotification triggers.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "sap-b1-visual-logic-mapper",
+      "description": "Reverse-engineer SAP B1 business logic into clear visual flowcharts and state diagrams.",
+      "changed": "2026-09-04 10:23"
+    },
+    {
+      "name": "sdlc-review",
+      "description": "Review Kanban handoffs and route verified outcomes.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "security-hardening-suite",
+      "description": "Enterprise threat modeling, OWASP Top 10 defense, web pentesting, code security audit, and secret redaction.",
+      "changed": "2026-09-18 17:37"
+    },
+    {
+      "name": "sertica-web-api",
+      "description": "Use when integrating the SERTICA Web API.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "serving-llms-vllm",
+      "description": "vLLM: high-throughput LLM serving, OpenAI API, quantization.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "simplify-code",
+      "description": "Parallel 4-agent cleanup of recent code changes.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "sketch",
+      "description": "Throwaway HTML mockups: 2-3 design variants to compare.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "slides",
+      "description": "Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "songsee",
+      "description": "Audio spectrograms/features (mel, chroma, MFCC) via CLI.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "songwriting-and-ai-music",
+      "description": "Songwriting craft and Suno AI music prompts.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "spike",
+      "description": "Throwaway experiments to validate an idea before build.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "sql",
+      "description": "Write, optimize, and debug SQL queries; design schemas, indexes, and database migrations.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "stock-media-sourcing",
+      "description": "Find hotlink-able stock media for web demos.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "subagent-driven-development",
+      "description": "Use when executing implementation plans with independent tasks in the current session",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "systematic-debugging",
+      "description": "4-phase root cause debugging: reproduce, isolate, surgical fix, and verification.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "tailwind-4-docs",
+      "description": "Comprehensive Tailwind CSS v4 documentation snapshot and workflow guidance.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "tdd",
+      "description": "Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions \"red-green-refactor\", or wants integration tests.",
+      "changed": "2026-10-02 09:46"
+    },
+    {
+      "name": "teams-meeting-pipeline",
+      "description": "Process Microsoft Teams meeting summaries, Graph subscriptions, and action items.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "test-and-verification-suite",
+      "description": "Unified Quality Gate & Testing Suite. Combines Red-Green-Refactor TDD, empirical verification evidence gates, LLM benchmark evaluations, and 4-phase systematic debugging.",
+      "changed": "2026-10-06 12:09"
+    },
+    {
+      "name": "test-driven-development",
+      "description": "TDD: enforce RED-GREEN-REFACTOR, tests before code.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "token-efficiency",
+      "description": "Hemat token saat coding: baca bertarget, diff minimal.",
+      "changed": "2026-09-11 11:16"
+    },
+    {
+      "name": "tool-loop-guard",
+      "description": "Prevent infinite tool-call loops. Detect, break, recover.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "touchdesigner-mcp",
+      "description": "Control TouchDesigner via twozero MCP.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "ui-antislop-master-suite",
+      "description": "Master Unified Anti-Slop UI & Design Engineering Suite. Consolidates anti-slop rules, exact Tailwind tokens, human accessibility, mobile reflow, and enterprise aesthetic patterns.",
+      "changed": "2026-10-06 12:09"
+    },
+    {
+      "name": "ui-design",
+      "description": "Comprehensive UI design fundamentals: layout, typography, color, spacing, and micro-interactions.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "ui-design-blueprint-prompt",
+      "description": "Authoring and enforcing ultra-strict AI Context Prompts for UI Design (Zero-Slop, Exact Tailwind, Exact Schema).",
+      "changed": "2026-10-01 15:40"
+    },
+    {
+      "name": "ui-design-themes",
+      "description": "Master UI Visual Themes & Aesthetics Catalog.",
+      "changed": "2026-09-18 17:37"
+    },
+    {
+      "name": "ui-design-tips",
+      "description": "Practical UI/UX design principles for visual hierarchy, contrast, forms, and mobile layouts.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "ui-styling",
+      "description": "Style accessible UIs with shadcn/ui components, Radix, and Tailwind utility classes.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "description": "Comprehensive UI/UX design intelligence across layouts, palettes, typography, and charts.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "uptime-monitoring",
+      "description": "> Implement uptime monitoring and status page systems for tracking service availability.",
+      "changed": "2026-09-03 16:12"
+    },
+    {
+      "name": "using-superpowers",
+      "description": "Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "vercel-react-best-practices",
+      "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
+      "changed": "2026-10-06 12:09"
+    },
+    {
+      "name": "vercel-static-deploy",
+      "description": "Deploy static sites to Vercel via CLI/API.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "vercel-webdesign",
+      "description": "| Vercel / Geist-inspired premium web design language.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "verification-before-completion",
+      "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirm...",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "vite",
+      "description": "Vite build tool configuration, plugin API, SSR, and Vite 8 Rolldown migration.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "vue",
+      "description": "Build, debug, and review Vue 3 applications with Pinia, Vue Router, and modern reactivity.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "web-animation",
+      "description": "Web animation: easing, timing, performant motion patterns.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "web-scraping-research",
+      "description": "Scrape web docs/research to extract knowledge into skills.",
+      "changed": "2026-09-14 10:44"
+    },
+    {
+      "name": "weekly-review-planning",
+      "description": "Weekly reset: commitments, stalled work, next-week plan.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "weights-and-biases",
+      "description": "W&B: log ML experiments, sweeps, model registry, dashboards.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "windows-hardware-tuning",
+      "description": "Master Windows OS, APU/iGPU Dev Tuning, Power Management, WSL administration, and UI diagnosis.",
+      "changed": "2026-09-18 17:37"
+    },
+    {
+      "name": "word-report-docx",
+      "description": "Use when asked for a polished Word (.docx) report or manual.",
+      "changed": "2026-09-23 16:45"
+    },
+    {
+      "name": "writing-plans",
+      "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "writing-skills",
+      "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "xlsx",
+      "description": "Create, read, edit Excel .xlsx workbooks and CSVs.",
+      "changed": "2026-09-23 16:45"
+    },
+    {
+      "name": "xurl",
+      "description": "X/Twitter via xurl CLI: raw post search, posting, DM, media.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "youtube-content",
+      "description": "YouTube transcripts to summaries, threads, blogs.",
+      "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "youtube-music",
+      "description": "Use when managing YouTube Music playlists (ytmusicapi).",
+      "changed": "2026-09-14 10:44"
+    }
+  ]
+}

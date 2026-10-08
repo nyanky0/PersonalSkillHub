@@ -1,0 +1,62 @@
+PROSES PENGEMBALIAN BARANG (GOODS RETURN / GRE)
+Sistem: IBT One (Web Add-on), Integration Hub, SAP Business One
+Entitas SAP: PurchaseReturns (OData), PurchaseDeliveryNotes, PurchaseOrders
+
+Aktor:
+1. Petugas Gudang
+2. Approver Retur (Kepala Gudang / Manajemen)
+3. Integration Hub
+4. SAP B1 Service Layer
+
+Alur Langkah Kerja:
+
+Mulai
+Ditemukan barang cacat, rusak fisik, atau salah spesifikasi yang harus dikembalikan ke vendor penyedia.
+
+Pilihan Pintu Masuk Dokumen Retur:
+1a. GRE based on GRPO
+Aktor: Petugas Gudang
+Aksi: Buka menu Goods Return (GRE) di IBT One. Klik tombol "Copy From / Copy To" dari dokumen GRPO acuan. Sistem otomatis memuat nama vendor asal, nomor GRPO base entry, dan kuantitas maksimal yang valid diretur.
+
+1b. GRE Standalone
+Aktor: Petugas Gudang
+Aksi: Buka menu Goods Return dan klik "Create New" tanpa referensi GRPO (untuk retur stok lama / non-GRPO). Petugas menginput nama vendor, memilih gudang asal stok, dan memilih item part secara manual.
+
+2. Input Kuantitas Retur & Foto
+Aktor: Petugas Gudang
+Aksi: Masukkan jumlah barang yang hendak diretur. Tuliskan deskripsi alasan kerusakan pada kolom keterangan. Unggah file lampiran foto bukti cacat fisik barang.
+
+Decision: Qty Retur <= Batas Acuan?
+Kondisi validasi kuantitas retur (khusus jalur based on GRPO):
+- Melebihi: Kuantitas retur melebihi sisa penerimaan GRPO. Alur dialihkan ke node "Quantity Guard" (sistem menolak submit dan mewajibkan user merevisi angka kuantitas agar stok tidak defisit). Alur kembali ke langkah 2.
+- Valid / Sesuai: Kuantitas berada dalam batas toleransi. Alur berlanjut ke langkah 3.
+
+3. Lengkapi Ekspedisi Retur
+Aktor: Petugas Gudang
+Aksi: Masukkan informasi pengiriman fisik retur: nama ekspedisi pihak ketiga / armada pengangkut, nomor resi surat jalan retur, dan estimasi waktu sampai ke vendor.
+
+4. Submit GRE & Approval
+Aktor: Petugas Gudang & Approver
+Aksi: Klik Submit dokumen GRE. Sistem menjalankan alur persetujuan berjenjang. Dokumen disetujui oleh Kepala Gudang/Manajemen.
+
+5. Siapkan Payload GRE
+Aktor: Sistem IBT One
+Aksi: IBT One membentuk payload JSON entitas OData "PurchaseReturns".
+
+6. Kirim Payload ke Hub
+Aktor: Sistem IBT One
+Aksi: Mengirimkan payload GRE ke Integration Hub. Sistem IBT One secara bersamaan membukukan pemotongan stok pada inventori gudang lokal.
+
+Integration Hub
+Aktor: Service Integration Hub
+Aksi: Menampung data pada Ingestion Buffer GRE dan mengeksekusi OData POST ke SAP B1 Service Layer.
+
+7. GRE Closed & Pulihkan PO
+Aktor: Sistem IBT One & SAP B1
+Aksi: Dokumen Purchase Returns resmi terbentuk di SAP B1. Efek data:
+- Stok gudang berkurang di SAP B1.
+- Untuk retur berbasis GRPO, sisa kuantitas terbuka (Open Quantity) pada PO asal otomatis dipulihkan sehingga barang dapat dipesan/dikirim ulang oleh vendor.
+- Status dokumen GRE berubah menjadi "Closed".
+
+Selesai
+Proses retur barang selesai.

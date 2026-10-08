@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Menu Template</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@page { size: A4; margin: 0; }
+
+:root {
+  --cream: #fdf6e9;
+  --cream-dark: #f4e8d0;
+  --brown: #6b4423;
+  --brown-dark: #3e2410;
+  --brown-light: #b07a3a;
+  --green: #2d6a3e;
+  --green-dark: #1e4a2b;
+  --gold: #d4a017;
+  --gold-light: #f0c040;
+  --red: #c0392b;
+  --ink: #2a1a0a;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #2a2a2a;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-card {
+  width: 420px;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, var(--green-dark) 0%, var(--brown-dark) 100%);
+  padding: 30px 24px 22px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: 12px;
+  background: var(--cream);
+  clip-path: polygon(0 100%, 0 50%, 5% 80%, 10% 30%, 15% 70%, 20% 20%, 25% 60%, 30% 25%, 35% 65%, 40% 15%, 45% 55%, 50% 20%, 55% 60%, 60% 30%, 65% 70%, 70% 25%, 75% 65%, 80% 20%, 85% 60%, 90% 30%, 95% 70%, 100% 40%, 100% 100%);
+}
+
+.header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 38px;
+  color: var(--gold-light);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  line-height: 1;
+}
+
+.header .tagline {
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: rgba(255,255,255,0.85);
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+.header .tagline::before,
+.header .tagline::after {
+  content: '✦';
+  color: var(--gold);
+  margin: 0 8px;
+  font-size: 8px;
+}
+
+/* SECTION */
+.section { padding: 12px 24px 4px; }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  margin-top: 6px;
+}
+
+.section-header .line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--brown-light), transparent);
+  max-width: 80px;
+}
+
+.section-header h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--brown-dark);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* MENU ITEMS */
+.menu-list { list-style: none; }
+
+.menu-item {
+  display: flex;
+  align-items: baseline;
+  padding: 5px 0;
+  font-size: 13.5px;
+}
+
+.menu-name { color: var(--ink); font-weight: 500; }
+
+.menu-dots {
+  flex: 1;
+  border-bottom: 1.5px dotted var(--brown-light);
+  margin: 0 6px;
+  position: relative;
+  top: -3px;
+}
+
+.menu-price { font-weight: 700; font-size: 13.5px; white-space: nowrap; color: var(--green); }
+
+.menu-item.main .menu-name { font-weight: 700; color: var(--brown-dark); }
+.menu-item.main .menu-price { color: var(--red); }
+
+.menu-item.sub { padding-left: 16px; font-size: 12.5px; }
+.menu-item.sub .menu-name { color: var(--brown-light); font-weight: 400; font-style: italic; }
+.menu-item.sub .menu-price { color: var(--brown-light); }
+
+.badge {
+  display: inline-block;
+  background: var(--red);
+  color: var(--white);
+  font-size: 8px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 2px;
+  margin-left: 6px;
+  letter-spacing: 1px;
+}
+
+/* FOOTER */
+.footer {
+  margin: 8px 16px 16px;
+  background: linear-gradient(135deg, var(--brown-dark) 0%, var(--green-dark) 100%);
+  border-radius: 6px;
+  padding: 14px 20px;
+  text-align: center;
+}
+
+.footer .wash-info {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold-light);
+  margin-bottom: 4px;
+}
+
+.footer p {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<div class="menu-card">
+
+  <!-- HEADER: Replace BRAND_NAME and tagline -->
+  <div class="header">
+    <h1>BRAND NAME</h1>
+    <div class="tagline">Tagline Here</div>
+  </div>
+
+  <!-- MAKANAN -->
+  <div class="section">
+    <div class="section-header">
+      <div class="line"></div>
+      <h2>🍖 Makanan</h2>
+      <div class="line"></div>
+    </div>
+    <ul class="menu-list">
+      <!-- Main item with badge -->
+      <li class="menu-item main">
+        <span class="menu-name">Signature Dish<span class="badge">BEST</span></span>
+        <span class="menu-dots"></span>
+        <span class="menu-price">Rp 45.000</span>
+      </li>
+      <!-- Sub item (half portion) -->
+      <li class="menu-item sub">
+        <span class="menu-name">½ Porsi</span>
+        <span class="menu-dots"></span>
+        <span class="menu-price">Rp 23.000</span>
+      </li>
+      <!-- Regular item -->
+      <li class="menu-item">
+        <span class="menu-name">Regular Item</span>
+        <span class="menu-dots"></span>
+        <span class="menu-price">Rp 35.000</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- MINUMAN -->
+  <div class="section">
+    <div class="section-header">
+      <div class="line"></div>
+      <h2>🥤 Minuman</h2>
+      <div class="line"></div>
+    </div>
+    <ul class="menu-list">
+      <li class="menu-item">
+        <span class="menu-name">Drink Item</span>
+        <span class="menu-dots"></span>
+        <span class="menu-price">Rp 10.000</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- FOOTER: Replace with business info -->
+  <div class="footer">
+    <div class="wash-info">Service 1 · Service 2 · Service 3</div>
+    <p>Terima Kasih</p>
+  </div>
+
+</div>
+
+</body>
+</html>
