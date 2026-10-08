@@ -74,3 +74,36 @@ Repo ini tunduk pada aturan ketat **Anti-AI-Slop**:
 - Tanpa dependensi dummy atau boilerplate fiktif.
 - Kode dan instruksi selalu berbasis fakta teknis empiris (*zero-hallucination*).
 - Setiap pembaruan wajib lulus gerbang pengujian kualitas sebelum disatukan ke branch utama.
+
+
+---
+
+## 🛡️ Global Agent Behavior Rules (Integrity, Documentation & Environment)
+
+### 1. Change Classification
+- **Bug Fix (Crash, Fatal Error, Schema Mismatch)**: Boleh langsung di-fix secara otonom, namun **wajib mencatat dan melaporkan secara jelas** file apa yang diubah dan kenapa.
+- **Business Logic Change (Nilai Default, Formula, Rule Bisnis, Field Tampil/Tidak, Enum Value)**: **HARUS KONFIRMASI KE USER TERLEBIH DAHULU** sebelum mengubah kode. Jangan pernah berasumsi atas logika bisnis!
+
+### 2. Documentation & Feedback Loop
+- **Setiap Perubahan Kode**: Informasikan ke user secara spesifik apa yang berubah dan alasannya.
+- **Flagging Potensi Mismatch**: Jika ada nilai yang diambil dari kode tapi mencurigakan / mungkin tidak sesuai ekspektasi bisnis ➔ **Flag ke user**, jangan langsung diubah sendiri.
+- **Knowledge Base & Memory**: Catatan memory/KB harus mencerminkan **kondisi kode aktual**, bukan kondisi ideal atau angan-angan.
+
+### 3. Knowledge Base Writing
+- Tulis apa yang **ADA di kode (aktual)**, bukan apa yang seharusnya ada.
+- Jika menemukan inkonsistensi di kode saat menulis KB ➔ Catat secara eksplisit sebagai ⚠️ perlu konfirmasi, jangan langsung dikoreksi secara sepihak.
+
+### 4. Server & Environment
+- **Cek Port Digunakan**: Selalu cek ketersediaan port (Get-NetTCPConnection / Test-NetConnection) sebelum menyalakan server/service baru.
+- **Port Collision Handling**: Jika terjadi bentrok port ➔ Pilih port bebas berikutnya secara otomatis, perbarui .env, dan informasikan perubahannya ke user.
+
+### 5. Seeder & Migration Integrity
+- **Verifikasi Skema Seeder**: Sebelum mengeksekusi seeder, verifikasi apakah kolom pada seeder masih cocok dengan migrasi database aktual.
+- **Dropped Column Protection**: Kolom yang sudah di-DROP di migrasi ➔ **DILARANG KERAS** dimasukkan kembali ke seeder atau model Eloquent/Entity.
+
+### 6. Session Log (Anti-Pollution)
+- **Isolasi Log Sesi**: Setiap sesi yang melakukan modifikasi kode ➔ Simpan riwayat log perubahan di **temp folder (%USERPROFILE%\.gemini	mp\ atau %TEMP%ntigravity-logs\)**, **DILARANG menyimpan file log di dalam folder repository project**!
+- **Format Catatan Log**:
+  `	ext
+  [YYYY-MM-DD HH:mm:ss] File: <path> | Type: <Bug Fix | Business Logic> | Alasan: <penjelasan>
+  `
