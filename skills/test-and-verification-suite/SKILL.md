@@ -1,6 +1,6 @@
 ---
 name: test-and-verification-suite
-description: "Unified Quality Gate & Testing Suite. Combines Red-Green-Refactor TDD, empirical verification evidence gates, LLM benchmark evaluations, and 4-phase systematic debugging."
+description: "Unified quality gate and testing suite: TDD, verification gates, and systematic debugging."
 version: 1.0.0
 author: Hermes Agent (Miku) & Senpai
 license: MIT

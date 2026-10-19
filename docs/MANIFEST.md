@@ -1,6 +1,6 @@
 # SkillHub — MANIFEST Skill
 
-Total skill: **218**  ·  Di-generate: 2026-10-07 11:18
+Total skill: **222**  ·  Di-generate: 2026-10-19 16:52
 
 | Skill | Deskripsi | Terakhir diubah |
 |---|---|---|
@@ -8,7 +8,7 @@ Total skill: **218**  ·  Di-generate: 2026-10-07 11:18
 | agent-skill-sync | Use to sync agent skills across Hermes, Cline, Gemini. | 2026-09-03 15:53 |
 | agent-skills-install | Install agent skills from GitHub into Hermes, Cline, Gemini. | 2026-09-03 16:12 |
 | agentic | Conversational AI-first interface with minimal controls, clear outcomes, and delegated task flows for agentic workflows. | 2026-09-03 15:33 |
-| ai-agent-brain | Unified AI Agent Brain & Master Engineering Core. Synthesizes Dual-Layer Engine (Miku-chan Kawaii Persona + Titanium Principal Architect Mind), Karpathy Engineering Discipline, Anti-AI Slop Writing, Ruflow Triad Pattern, Token Efficiency, and Enterprise Security. | 2026-09-18 17:37 |
+| ai-agent-brain | Core AI brain: Miku-chan persona, Karpathy engineering discipline, Ruflow triad, token efficiency, and security. | 2026-09-18 17:37 |
 | ai-slop-audit | Advanced AI-slop audit — batch image validation, slop pattern detection, CSS analysis, CTA integrity, auto-report generation. | 2026-09-14 10:44 |
 | airtable | Airtable REST API via curl. Records CRUD, filters, upserts. | 2026-09-03 15:33 |
 | animejs | Implement performant JavaScript web animations, timelines, and SVG morphing with Anime.js. | 2026-09-03 15:33 |
@@ -51,7 +51,7 @@ Total skill: **218**  ·  Di-generate: 2026-10-07 11:18
 | cline-custom-endpoint-setup | Configures a custom API endpoint in Cline on Windows. | 2026-09-09 09:48 |
 | codebase-architecture-analysis | Use when explaining an unfamiliar application codebase. | 2026-09-14 10:44 |
 | codebase-design | Design deep modules, clean seams, and AI-navigable software interfaces. | 2026-09-14 10:44 |
-| codebase-inspection | Inspect codebases w/ pygount: LOC, languages, ratios. | 2026-09-03 15:33 |
+| codebase-inspection | Inspect codebases with pygount: lines of code, languages, and file ratios. | 2026-09-03 15:33 |
 | codex | Delegate coding to OpenAI Codex CLI (features, PRs). | 2026-09-03 15:33 |
 | comfyui | Generate images, video, and audio via diffusion workflows. | 2026-09-03 15:33 |
 | competitor-news-monitor | Watch named companies for material news; cited digests. | 2026-09-03 15:33 |
@@ -69,7 +69,7 @@ Total skill: **218**  ·  Di-generate: 2026-10-07 11:18
 | document-to-action-items | Extract cited obligations, deadlines, decisions, and action items from documents. | 2026-09-03 15:33 |
 | docx | Create, read, edit, template, and review Word .docx files. | 2026-09-23 16:45 |
 | dogfood | Exploratory QA of web apps: find bugs, evidence, reports. | 2026-09-03 15:33 |
-| dotnet-csharp-master | Master .NET & C# Enterprise Suite. Modern C# 12, ASP.NET Core, Akka.NET actor systems, REST vs gRPC vs SignalR architecture, and clean patterns. | 2026-09-18 17:37 |
+| dotnet-csharp-master | Master .NET and C# enterprise suite: C# 12, ASP.NET Core, clean architecture, and performance. | 2026-09-18 17:37 |
 | drawio-skill | Create, edit, synchronize, inspect, test, and publish editable draw.io diagrams. Use when the user explicitly requests draw.io/diagrams.net, needs a polished architecture, ERD, UML, sequence, C4, SysML, BPMN, network, swimlane, ML, or infrastructure diagram, wants code/IaC/SQL/OpenAPI/AsyncAPI/Protobuf/GraphQL converted into a diagram, or wants an existing diagram queried, reviewed, diffed, restyled, kept in sync, or made interactive. Prefer Mermaid/PlantUML elsewhere when the requested artifact is diagrams-as-code rather than an editable draw.io file. | 2026-09-22 16:22 |
 | email-inbox-triage | Triage an inbox: prioritize threads, draft replies safely. | 2026-09-03 15:33 |
 | enterprise-fdd-master | Unified Master Suite for engineering enterprise Functional Design Documents (FDD) for SAP Business One & Web Add-on integrations. Consolidates fdd-generation-workflow, sap-b1-fdd-author, concise-fdd-writing, and validation-trigger-analyzer with zero-hallucination, 4-tier parity, Soltius flowchart standards (#4F88BB), Black Table styling, validation code taxonomy, and Bab 4 UI patent standard (Desktop & Mobile pairing, ruler 0.63cm/1.27cm, bold/italic captions). | 2026-09-23 16:44 |
@@ -86,8 +86,9 @@ Total skill: **218**  ·  Di-generate: 2026-10-07 11:18
 | frontend-design | Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. | 2026-09-14 10:44 |
 | frontend-implementation | Build and verify production web UI pages, components, and layout responsiveness. | 2026-09-14 10:44 |
 | gif-search | Search/download GIFs from Tenor via curl + jq. | 2026-09-03 15:33 |
-| github-master-workflow | Master Git & GitHub Lifecycle Suite. Complete automation and best practices for gh CLI, PR reviews, branch management, issue triage, git wor... | 2026-09-18 17:37 |
+| github-master-workflow | Master Git and GitHub lifecycle suite: PRs, branch management, reviews, and git workflows. | 2026-09-18 17:37 |
 | google-workspace | Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python. | 2026-09-03 15:33 |
+| graphify | Use for any question about a codebase, its architecture, file relationships, or project content — especially when graphify-out/ exists, where the question should be treated as a graphify query first. Turns any input (code, docs, papers, images, videos) into a persistent knowledge graph with god nodes, community detection, and query/path/explain tools. | 2026-10-12 10:11 |
 | grill-me | A relentless interview to sharpen a plan or design. | 2026-09-14 10:44 |
 | grounded-citations | Ground answers and documents in cited, verifiable sources. | 2026-09-03 15:33 |
 | guitar-chords | Guitar chords / kunci gitar / chord book PDF requests. | 2026-09-14 10:44 |
@@ -166,6 +167,7 @@ Total skill: **218**  ·  Di-generate: 2026-10-07 11:18
 | research-paper-writing | Write ML papers for NeurIPS/ICML/ICLR: design→submit. | 2026-09-03 15:33 |
 | run-local-web-app | Use when asked to run a local app: serve it and verify. | 2026-09-14 10:44 |
 | safe-code-authoring | Use when writing code via agent tools; empty parens strip. | 2026-09-14 10:44 |
+| safe-local-app-overhaul | Use for safe local app overhauls. | 2026-10-19 16:51 |
 | sap-b1-fdd-author | Generate standard Soltius FDD documentation from SAP B1 source code and DB schemas. Consolidated into enterprise-fdd-master. | 2026-09-04 10:27 |
 | sap-b1-integration-mapper | Use when documenting SAP Business One (SAP B1) integration — Service Layer / OData endpoints, HTTPS calls, B1SESSION/ROUTEID session handling, payl... | 2026-09-03 15:33 |
 | sap-b1-suite | Master SAP Business One SDK & Integration Suite. | 2026-10-01 11:13 |
@@ -177,8 +179,10 @@ Total skill: **218**  ·  Di-generate: 2026-10-07 11:18
 | security-hardening-suite | Enterprise threat modeling, OWASP Top 10 defense, web pentesting, code security audit, and secret redaction. | 2026-09-18 17:37 |
 | sertica-web-api | Use when integrating the SERTICA Web API. | 2026-09-14 10:44 |
 | serving-llms-vllm | vLLM: high-throughput LLM serving, OpenAI API, quantization. | 2026-09-03 15:33 |
+| shared-local-mcp-services | Use when sharing a local MCP service across agents. | 2026-10-19 16:51 |
 | simplify-code | Parallel 4-agent cleanup of recent code changes. | 2026-09-03 15:33 |
 | sketch | Throwaway HTML mockups: 2-3 design variants to compare. | 2026-09-03 15:33 |
+| skill | > | 2026-10-19 16:51 |
 | slides | Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies. | 2026-09-03 15:33 |
 | songsee | Audio spectrograms/features (mel, chroma, MFCC) via CLI. | 2026-09-03 15:33 |
 | songwriting-and-ai-music | Songwriting craft and Suno AI music prompts. | 2026-09-03 15:33 |
@@ -186,16 +190,16 @@ Total skill: **218**  ·  Di-generate: 2026-10-07 11:18
 | sql | Write, optimize, and debug SQL queries; design schemas, indexes, and database migrations. | 2026-09-14 10:44 |
 | stock-media-sourcing | Find hotlink-able stock media for web demos. | 2026-09-14 10:44 |
 | subagent-driven-development | Use when executing implementation plans with independent tasks in the current session | 2026-09-03 15:33 |
-| systematic-debugging | 4-phase root cause debugging: reproduce, isolate, surgical fix, and verification. | 2026-09-03 15:33 |
+| systematic-debugging | 4-phase root cause debugging: reproduce, isolate, surgical fix, and verify. | 2026-09-03 15:33 |
 | tailwind-4-docs | Comprehensive Tailwind CSS v4 documentation snapshot and workflow guidance. | 2026-09-14 10:44 |
 | tdd | Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions "red-green-refactor", or wants integration tests. | 2026-10-02 09:46 |
 | teams-meeting-pipeline | Process Microsoft Teams meeting summaries, Graph subscriptions, and action items. | 2026-09-03 15:33 |
-| test-and-verification-suite | Unified Quality Gate & Testing Suite. Combines Red-Green-Refactor TDD, empirical verification evidence gates, LLM benchmark evaluations, and 4-phase systematic debugging. | 2026-10-06 12:09 |
+| test-and-verification-suite | Unified quality gate and testing suite: TDD, verification gates, and systematic debugging. | 2026-10-06 12:09 |
 | test-driven-development | TDD: enforce RED-GREEN-REFACTOR, tests before code. | 2026-09-03 15:33 |
 | token-efficiency | Hemat token saat coding: baca bertarget, diff minimal. | 2026-09-11 11:16 |
 | tool-loop-guard | Prevent infinite tool-call loops. Detect, break, recover. | 2026-09-14 10:44 |
 | touchdesigner-mcp | Control TouchDesigner via twozero MCP. | 2026-09-03 15:33 |
-| ui-antislop-master-suite | Master Unified Anti-Slop UI & Design Engineering Suite. Consolidates anti-slop rules, exact Tailwind tokens, human accessibility, mobile reflow, and enterprise aesthetic patterns. | 2026-10-06 12:09 |
+| ui-antislop-master-suite | Anti-AI-slop UI design suite: strict Tailwind tokens, human accessibility, and mobile reflow. | 2026-10-06 12:09 |
 | ui-design | Comprehensive UI design fundamentals: layout, typography, color, spacing, and micro-interactions. | 2026-09-03 15:33 |
 | ui-design-blueprint-prompt | Authoring and enforcing ultra-strict AI Context Prompts for UI Design (Zero-Slop, Exact Tailwind, Exact Schema). | 2026-10-01 15:40 |
 | ui-design-themes | Master UI Visual Themes & Aesthetics Catalog. | 2026-09-18 17:37 |
@@ -210,7 +214,7 @@ Total skill: **218**  ·  Di-generate: 2026-10-07 11:18
 | verification-before-completion | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirm... | 2026-09-03 15:33 |
 | vite | Vite build tool configuration, plugin API, SSR, and Vite 8 Rolldown migration. | 2026-09-14 10:44 |
 | vue | Build, debug, and review Vue 3 applications with Pinia, Vue Router, and modern reactivity. | 2026-09-14 10:44 |
-| web-animation | Web animation: easing, timing, performant motion patterns. | 2026-09-14 10:44 |
+| web-animation | Web animation: CSS transitions, easing curves, and official GSAP timeline orchestration. | 2026-09-14 10:44 |
 | web-scraping-research | Scrape web docs/research to extract knowledge into skills. | 2026-09-14 10:44 |
 | weekly-review-planning | Weekly reset: commitments, stalled work, next-week plan. | 2026-09-03 15:33 |
 | weights-and-biases | W&B: log ML experiments, sweeps, model registry, dashboards. | 2026-09-03 15:33 |

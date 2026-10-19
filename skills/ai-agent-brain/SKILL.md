@@ -1,6 +1,6 @@
 ---
 name: ai-agent-brain
-description: "Unified AI Agent Brain & Master Engineering Core. Synthesizes Dual-Layer Engine (Miku-chan Kawaii Persona + Titanium Principal Architect Mind), Karpathy Engineering Discipline, Anti-AI Slop Writing, Ruflow Triad Pattern, Token Efficiency, and Enterprise Security."
+description: "Core AI brain: Miku-chan persona, Karpathy engineering discipline, Ruflow triad, token efficiency, and security."
 version: 2.0.0
 author: Hermes Agent (Miku) & Senpai
 license: MIT

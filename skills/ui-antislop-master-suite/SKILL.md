@@ -1,14 +1,14 @@
 ---
 name: ui-antislop-master-suite
-description: "Master Unified Anti-Slop UI & Design Engineering Suite. Consolidates anti-slop rules, exact Tailwind tokens, human accessibility, mobile reflow, and enterprise aesthetic patterns."
-version: 1.0.0
+description: "Anti-AI-slop UI design suite: strict Tailwind tokens, human accessibility, and mobile reflow."
+version: 1.1.0
 author: Hermes Agent (Miku) & Senpai
 license: MIT
 platforms: [windows, linux, macos]
 metadata:
   hermes:
-    tags: [ui, frontend, antislop, design, tailwind, accessibility, styling]
-    related_skills: [antislop-ui, anti-ai-slop, ui-styling, antislop-human, antislop-layoutmobile, ui-design-themes, popular-web-designs]
+    tags: [ui, frontend, antislop, design, tailwind, accessibility, styling, micro-interactions, craft]
+    related_skills: [antislop-ui, anti-ai-slop, ui-styling, make-interfaces-feel-better, antislop-human, antislop-layoutmobile, ui-design-themes, popular-web-designs]
 ---
 
 # UI Anti-Slop Master Suite
@@ -58,3 +58,28 @@ Gunakan gaya visual profesional yang terbukti di dunia nyata (Linear, Vercel, St
 - Tipografi tajam dengan hierarki font-size dan font-weight jelas (`text-sm font-medium`, `text-2xl font-semibold`).
 - Border tipis terukur (`border border-neutral-200 dark:border-neutral-800`).
 - Subtle micro-interactions (hover transisi 150ms-200ms `ease-out`).
+
+---
+
+## 5. Micro-Craft & Interface Feel (Jakub Krehel Standard)
+
+Aturan presisi tingkat mikro untuk memastikan interface terasa responsif, taktil, dan organik:
+
+1. **Concentric Border Radius**:
+   - Untuk nesting kontainer rounded yang berdekatan: `R_outer = R_inner + padding`.
+   - Menghindari sudut lancip atau padding aneh di dalam card/button bertingkat.
+2. **Optical vs Geometric Alignment**:
+   - Penjajaran geometris murni seringkali terlihat miring secara optik (misal icon panah, play triangle `▶`, star).
+   - Selalu berikan offset micro-padding/margin (1-2px) agar seimbang secara visual di mata manusia.
+3. **Typography & Tabular Numbers**:
+   - `text-wrap: balance` wajib untuk heading / title pendek (mencegah orphan words).
+   - `text-wrap: pretty` untuk paragraf deskripsi singkat & caption.
+   - `font-variant-numeric: tabular-nums` (Tailwind: `tabular-nums`) wajib untuk semua angka yang berubah dinamis (harga, counter, tabel finansial) agar tidak loncat saat update.
+4. **Subtle Image & Surface Outlines**:
+   - Berikan outline tipis 1px inset pada gambar/avatar agar tidak menyatu dengan background:
+     `outline: 1px solid rgba(0, 0, 0, 0.08); outline-offset: -1px;` (di dark mode gunakan `rgba(255, 255, 255, 0.1)`).
+5. **Tactile Press Feedback & Hit Targets**:
+   - Minimal area sentuh mobile `44x44px` (desktop minimal `40x40px`).
+   - Berikan feedback taktil halus pada `:active`: `transform: scale(0.97)` dengan transisi cepat 100ms.
+   - Animasi wajib *interruptible* (jangan pernah mengunci interaksi pengguna saat animasi berjalan).
+

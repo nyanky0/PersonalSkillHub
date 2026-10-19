@@ -64,8 +64,22 @@ agy worker):
 - Treat agy as a worker backend / third-opinion reviewer, not an orchestration
   primitive.
 
+## Installing third-party MCP servers in Antigravity
+
+Treat Antigravity IDE and Antigravity 2.0 / `agy` as separate hosts, even though both use Gemini branding; each has separate MCP configuration and capabilities. Identify the actual executable/UI the user means before touching config: Antigravity IDE reads the IDE MCP config; Antigravity 2.0 may be the standalone `agy` application and CLI, with its own global MCP registry/config. Follow the integration's current host-specific setup and verify available commands rather than assuming either product name implies the CLI.
+
+On Windows, prefer `cmd.exe` with args `["/c", "npx", "-y", "<package>@latest"]` for npm MCP servers; verify the complete command independently before adding it. Do not put shell flags or package arguments into an unquoted positional name in Hermes CLI: its `--args` consumes following tokens, so either call `hermes mcp add <name> --command cmd.exe --args /c npx -y <package>` with package name kept intact, or use the verified Hermes config CLI/schema if argument parsing fails. Preserve existing entries when merging JSON/config files.
+
+For **Antigravity IDE**, confirm the active build's MCP path from its local `mcp_servers.md` documentation rather than relying on stale web guidance; this installation's builtin docs identify `~/.gemini/config/mcp_config.json`. Do not assume `~/.gemini/antigravity/mcp_config.json` is authoritative merely because a repository example names it; check the app's docs and existing active config.
+
+For **Antigravity 2.0 / agy**, inspect `agy mcp --help` and `agy plugin --help`; use the integration's official plugin when it provides host-specific hooks/rules/MCP, otherwise register MCP via `agy mcp add`. Check `agy mcp list` after install and avoid duplicates if a plugin already registered the same server. Restart the relevant host after configuration.
+
+Verify each surface in its own context: use `hermes mcp test <name>` only for Hermes; use `agy mcp list` and `context-mode doctor` for CLI registration/health, then actually run an `agy` session tool prompt; inspect the IDE's MCP Servers panel or run a live IDE prompt for IDE discovery. A config file, plugin import, doctor PASS, or a successful different-host test does not prove the target host loaded tools. Report any authentication/account gate as an explicit unverified blocker, not as install failure or success.
+
+When the IDE does not show an MCP server, first compare the file edited with the IDE's own `mcp_servers.md` (and use builtin docs on disk if available); config locations differ between IDE and CLI and can change across versions. Keep routing guidance in the host-supported instruction file; if the IDE has no hooks, disclose that enforcement is instruction-based, not programmatic.
+
 ## Pitfalls
-- Do not confuse IDE-ACP (Direction A) with the agy CLI (Direction B).
+- If a third-party MCP is absent, compare the edited path against the installed Antigravity IDE builtin `mcp_servers.md` before changing settings; IDE config locations differ from `agy` CLI paths and can vary by build.
 - Skip guessing whether ACP is installed — run `hermes acp --check`.
 - If the ACP agent won't show in the editor, confirm `hermes` is on the editor's
   PATH and the command/args config matches `["hermes","acp"]`.

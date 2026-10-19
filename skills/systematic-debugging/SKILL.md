@@ -1,6 +1,6 @@
 ---
 name: systematic-debugging
-description: "4-phase root cause debugging: reproduce, isolate, surgical fix, and verification."
+description: "4-phase root cause debugging: reproduce, isolate, surgical fix, and verify."
 version: 1.1.0
 author: Hermes Agent (adapted from obra/superpowers)
 license: MIT

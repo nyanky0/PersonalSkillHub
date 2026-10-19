@@ -1,6 +1,6 @@
 ---
 name: github-master-workflow
-description: "Master Git & GitHub Lifecycle Suite. Complete automation and best practices for gh CLI, PR reviews, branch management, issue triage, git wor..."
+description: "Master Git and GitHub lifecycle suite: PRs, branch management, reviews, and git workflows."
 version: 2.0.0
 author: Hermes Agent & Antigravity
 metadata:

@@ -86,6 +86,30 @@ App katalog/dashboard biasanya memuat satu berkas raksasa (`assets/js/data.js` b
    bukan bug app.
 6. Laporkan angka ("21 dicek, 1 gagal"), bukan "sepertinya aman".
 
+## Pilih permukaan browser yang benar
+
+Tiga permukaan berbeda, dan salah pilih itu biaya paling mahal di skill ini:
+
+- **`drive_preview` / `desktop_preview` (preview pane Hermes)** — yang paling cepat untuk memeriksa halaman
+  app lokal: `desktop_preview open` → `drive_preview elements` → `read`. `elements` mengembalikan ref elemen
+  beserta **perannya** (`link`, `button`, `input`), dan itu sudah cukup untuk memutuskan di mana bug berada.
+  Nama ref yang mengungkap tipe elemen (mis. `lnk-https-facebook-com` = benar-benar `<a>`, bukan teks polos)
+  adalah bukti yang jauh lebih kuat daripada membaca JSX.
+- **Playwright + Edge headless** — untuk asertion otomatis, viewport desktop lebar, dan screenshot
+  (lihat bagian di bawah). Pakai ini kalau butuh script yang bisa dijalankan ulang.
+- **`file://`** tidak pernah boleh diserahkan ke user (lihat aturan di bawah).
+
+Urutan yang hemat: cek port dulu (`netstat -ano | grep -E ":(<port>)"`), karena dev server sering **sudah
+hidup** di mesin user — jangan start satu lagi di port berbeda lalu memeriksa app yang salah.
+
+Login ke app yang punya halaman quick-test biasanya lebih cepat lewat tombol auto-fill-nya: klik auto-fill,
+lalu `type` password dengan `submit: true` pada field terakhir. Kalau app punya pemilihan cabang, tekan
+submit-nya dulu — `open`/`goto` ke URL target sebelum cabang aktif akan memantul balik ke halaman pemilihan.
+
+Mode yang tidak punya URL sendiri (mis. tombol Edit yang mengubah state React) **tidak bisa** dipicu lewat
+preview pane secara andal. Kalau verifikasi butuh mode itu, beralih ke Playwright atau minta user
+mengkliknya — dan katakan terus terang bahwa bagian itu belum terverifikasi.
+
 ## Verifikasi UI di browser asli (layar lebar)
 
 Preview pane Hermes sempit → tata letak desktop (sidebar tetap, kolom tabel) masuk breakpoint
@@ -120,6 +144,24 @@ untuk anaknya), tiap sumber sering memakai nama field berbeda untuk hal yang sam
 Jadi assertion wajib: hitung elemen label yang teksnya kosong — "0 label kosong" itu bukti, bukan
 asumsi. Perbaikan ada di pembaca (`node.part_name ?? node.label` sebagai fallback), bukan di backend.
 
+### Baca DOM dulu, baru simpulkan bug — dua kali nyaris salah
+Layar **teks** sudah cukup untuk memutuskan di mana bug UI Inertia/Livewire berada. Kalau sebuah elemen
+terlihat "hilang" atau "belum dikerjakan", buka halamannya lalu inventaris elemen sebelum membaca kode.
+Dua bacaan yang paling sering menyelamatkan:
+
+- **Hitung elemen yang sama, bukan yang pertama.** Kalau elemen muncul dua kali di layar padahal
+  kodenya hanya satu, prop sumber sudah berisi nilai yang berbeda — payload yang datang ke halaman terlalu
+  gemuk dan komponennya menerima daftar tak terfilter. Cek berapa kali elemen itu benar-benar dirender;
+  jangan berhenti pada kemunculan pertama.
+- **Elemen yang “tidak dirender” biasanya memang ada di kode, tapi di dalam cabang ternary mode.** Cari
+  `{mode ? (form) : (view)}` sebelum menyimpulkan komponennya hilang: section yang hidup di cabang form
+  hanya ada saat mode itu aktif, sehingga dari luar tampak tidak pernah dibuat. Perbaikannya = pindahkan
+  section ke cabang yang juga tampil di mode baca, bukan menambah komponen kedua yang isinya berulang.
+
+Corollary: fitur yang gagal aktif setelah hot-reload sering **sudah benar** dan hanya kurang hard reload +
+bundle hash baru. Cek `public/build/manifest.json`; hash chunk yang tidak berubah = yang diuji masih bundle
+lama, dan itu penyebab tersering dari “perbaikanku tidak bekerja”.
+
 ### Jebakan waktu menulis script verifier
 Glob di dalam komentar blok JS/TS seperti `_npx/*/node_modules` **menutup komentar lebih awal**
 (`*/`) → `SyntaxError: Unexpected token`. Tulis path contoh tanpa glob, atau pakai komentar `//`.
@@ -138,5 +180,8 @@ Glob di dalam komentar blok JS/TS seperti `_npx/*/node_modules` **menutup koment
 
 - `templates/edge-ui-verify.cjs` — kerangka script verifikasi UI (Edge + Playwright: login → pilih
   cabang → assert teks DOM → screenshot → exit code) untuk disalin ke `scripts/` project.
+- `references/inertia-form-guards-and-validation.md` — bug form Inertia/React: validasi desimal vs kolom
+  `decimal`, guard tombol back vs router Inertia (plus cara mengujinya sebagai logika murni), section yang
+  hidup di cabang ternary mode, dan remarks bertaut di mode edit vs mode baca.
 - `references/spare-part-browser.md` — layout, server, compiler, dan jebakan mutu data app Spare Parts
   Browser katalog IBT (di bawah `D:\Metrodata\IBT\TEST`).

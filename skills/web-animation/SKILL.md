@@ -1,8 +1,8 @@
 ---
 name: web-animation
-description: "Web animation: easing, timing, performant motion patterns."
-version: 1.0.0
-author: Hermes Agent (synthesized from Josh W. Comeau, animations.dev)
+description: "Web animation: CSS transitions, easing curves, and official GSAP timeline orchestration."
+version: 1.1.0
+author: Hermes Agent & GreenSock Official (synthesized from Comeau, animations.dev, gsap-skills)
 license: MIT
 platforms: [linux, macos, windows, wsl]
 triggers:
@@ -13,6 +13,11 @@ triggers:
   - scroll reveal animation
   - web animation performance
   - prefers-reduced-motion
+  - gsap animation
+  - gsap timeline
+  - gsap scrolltrigger
+  - usegsap react
+  - green sock animation platform
 ---
 
 # Web Animation
@@ -149,9 +154,142 @@ Some users get nausea/malaise from motion. This is a responsibility, not a nice-
 - Scroll reveal without reduced-motion guard — motion-sick users get full-page animation.
 - Animating `left`/`top` for position — use `transform: translate` instead (GPU path).
 
+---
+
+## Programmatic Animation & GSAP Engine (Official GreenSock Standard)
+
+Gunakan **CSS transitions** untuk interaksi 1-langkah sederhana (hover, focus, modal open). Gunakan **GSAP (GreenSock Animation Platform)** ketika membutuhkan sekuens timeline multi-elemen, ScrollTrigger, physics, drag/drop, atau koordinasi kompleks.
+
+### 1. GSAP Core Rules & Transforms
+- **Transforms Selalu Menang**: Gunakan `x`, `y`, `scale`, `rotation` (dioptimasi GPU via Matrix3D). **Jangan pernah** menganimasikan `top`, `left`, `width`, `height`.
+- **Gunakan `autoAlpha`**: Kombinasi `opacity` dan `visibility: hidden`. Mencegah elemen tak terlihat tetap menangkap event klik:
+  ```javascript
+  gsap.to(".card", { autoAlpha: 1, y: 0, duration: 0.4, ease: "power2.out" });
+  ```
+- **Staggers Teratur**:
+  ```javascript
+  gsap.from(".list-item", {
+    y: 20,
+    autoAlpha: 0,
+    stagger: 0.05,
+    ease: "power1.out",
+    duration: 0.3
+  });
+  ```
+- **Global Defaults**: Tetapkan default agar tidak menduplikasi konfigurasi:
+  ```javascript
+  gsap.defaults({ ease: "power2.out", duration: 0.35 });
+  ```
+
+### 2. Timeline Orchestration (Bukan Callback Hell)
+Hindari merantai `setTimeout` atau delay manual. Gunakan `gsap.timeline()`:
+```javascript
+const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+tl.to(".header", { y: 0, autoAlpha: 1, duration: 0.4 })
+  .to(".sidebar", { x: 0, autoAlpha: 1, duration: 0.3 }, "-=0.2") // Overlap 200ms
+  .from(".content", { y: 30, autoAlpha: 0, duration: 0.4 }, "<"); // Mulai barengan dengan step sebelumnya
+```
+
+### 3. Framework Lifecycle (React & Vue 3)
+*Anti-Pola: Menggunakan GSAP di React tanpa pembersihan memori akan menyebabkan memory leak, zombie animations, dan duplicate tweens saat re-render.*
+
+#### React / Next.js (`@gsap/react`):
+Wajib gunakan hook resmi `useGSAP`:
+```tsx
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
+export function HeroSection() {
+  const container = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    // Semua selector di-scope ke dalam container (aman dari global leak)
+    gsap.from(".title", { y: 40, autoAlpha: 0, duration: 0.6 });
+  }, { scope: container });
+
+  return (
+    <div ref={container}>
+      <h1 className="title">Hello World</h1>
+    </div>
+  );
+}
+```
+*Catatan: Jika ada interaksi event handler (misal `onClick`), bungkus dengan `contextSafe`:*
+```tsx
+const { contextSafe } = useGSAP({ scope: container });
+const handleClick = contextSafe(() => {
+  gsap.to(".title", { scale: 1.05, duration: 0.15, yoyo: true, repeat: 1 });
+});
+```
+
+#### Vue 3:
+Gunakan `gsap.context()` untuk auto-revert di `onUnmounted`:
+```vue
+<script setup>
+import { onMounted, onUnmounted, ref } from "vue";
+import gsap from "gsap";
+
+const root = ref(null);
+let ctx;
+
+onMounted(() => {
+  ctx = gsap.context(() => {
+    gsap.from(".card", { y: 20, autoAlpha: 0, stagger: 0.05 });
+  }, root.value);
+});
+
+onUnmounted(() => {
+  ctx?.revert(); // Bersihkan semua timeline & event
+});
+</script>
+```
+
+### 4. ScrollTrigger Best Practices
+```javascript
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".parallax-bg", {
+  yPercent: -20,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".section",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: 1, // Smooth scrubbing
+    invalidateOnRefresh: true // Rekalkulasi ukuran saat resize
+  }
+});
+```
+
+### 5. High-Frequency Tracking (`quickTo`)
+Untuk interaksi mousemove/cursor follower, jangan buat tween baru di setiap event loop. Gunakan `gsap.quickTo`:
+```javascript
+const xTo = gsap.quickTo(".cursor-dot", "x", { duration: 0.2, ease: "power3" });
+const yTo = gsap.quickTo(".cursor-dot", "y", { duration: 0.2, ease: "power3" });
+
+window.addEventListener("mousemove", (e) => {
+  xTo(e.clientX);
+  yTo(e.clientY);
+});
+```
+
+---
+
+## 📌 Mengapa GSAP, Bukan Anime.js?
+- **Dokumentasi Anime.js**: Di skill `web-animation` ini **tidak ada dokumentasi Anime.js**.
+- **Perbandingan Teknis**:
+  - Anime.js (v3/v4) bagus dan ringan untuk manipulasi SVG path morphing sederhana di vanilla JS.
+  - Namun untuk aplikasi web enterprise berbasis komponen (React/Vue/Inertia), **GSAP adalah standar industri** karena memiliki hook resmi (`useGSAP`), ekosistem physics lengkap (ScrollTrigger, Flip), dukungan SSR/Next.js mumpuni, serta penanganan *cleanup/garbage collection* memori yang anti-leak saat transisi halaman Inertia.
+
+---
+
 ## Verification
 
 1. `node --check` extracted JS (if any) for syntax errors.
 2. Browser: console 0 errors; check `prefers-reduced-motion` media query works (DevTools emulation).
 3. Visual: hover states, modal open/close, scroll reveals — all smooth (no snap/jank).
 4. Performance: DevTools Performance tab — no long frames; only transform/opacity in the animation.
+5. Framework cleanup: Tidak ada tween yang menggantung setelah component unmount atau navigasi halaman Inertia/React.
+

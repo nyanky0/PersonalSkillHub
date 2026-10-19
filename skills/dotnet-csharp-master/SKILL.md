@@ -1,6 +1,6 @@
 ---
 name: dotnet-csharp-master
-description: "Master .NET & C# Enterprise Suite. Modern C# 12, ASP.NET Core, Akka.NET actor systems, REST vs gRPC vs SignalR architecture, and clean patterns."
+description: "Master .NET and C# enterprise suite: C# 12, ASP.NET Core, clean architecture, and performance."
 version: 2.0.0
 author: Hermes Agent & Antigravity
 metadata:
