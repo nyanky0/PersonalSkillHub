@@ -1,7 +1,7 @@
 {
   "hub": "D:\\SkillHub\\skills",
-  "generated": "2026-10-23 10:40:57",
-  "count": 222,
+  "generated": "2026-11-02 11:36:14",
+  "count": 225,
   "skills": [
     {
       "name": "agent-reach",
@@ -37,6 +37,11 @@
       "name": "airtable",
       "description": "Airtable REST API via curl. Records CRUD, filters, upserts.",
       "changed": "2026-09-03 15:33"
+    },
+    {
+      "name": "amaterasu",
+      "description": ">",
+      "changed": "2026-11-02 11:35"
     },
     {
       "name": "animejs",
@@ -519,6 +524,11 @@
       "changed": "2026-09-03 15:33"
     },
     {
+      "name": "instabox",
+      "description": "Manage InstaBox cloud sandboxes (Firecracker microVMs), deploy web applications, configure public HTTPS port ingress, handle 30m idle auto-suspend/resume lifecycles, and execute remote server maintenance via CLI, SDK, and HTTP API.",
+      "changed": "2026-10-30 11:43"
+    },
+    {
       "name": "invitation-web-pattern",
       "description": "Use when building undangan-style landing or portfolio pages.",
       "changed": "2026-09-14 10:44"
@@ -822,6 +832,11 @@
       "name": "safe-local-app-overhaul",
       "description": "Use for safe local app overhauls.",
       "changed": "2026-10-19 16:51"
+    },
+    {
+      "name": "sanity-anti-hallucination",
+      "description": "|",
+      "changed": "2026-11-02 11:35"
     },
     {
       "name": "sap-b1-fdd-author",

@@ -1,6 +1,6 @@
 # SkillHub — MANIFEST Skill
 
-Total skill: **222**  ·  Di-generate: 2026-10-23 10:40
+Total skill: **225**  ·  Di-generate: 2026-11-02 11:36
 
 | Skill | Deskripsi | Terakhir diubah |
 |---|---|---|
@@ -11,6 +11,7 @@ Total skill: **222**  ·  Di-generate: 2026-10-23 10:40
 | ai-agent-brain | Core AI brain: Miku-chan persona, Karpathy engineering discipline, Ruflow triad, token efficiency, and security. | 2026-09-18 17:37 |
 | ai-slop-audit | Advanced AI-slop audit — batch image validation, slop pattern detection, CSS analysis, CTA integrity, auto-report generation. | 2026-09-14 10:44 |
 | airtable | Airtable REST API via curl. Records CRUD, filters, upserts. | 2026-09-03 15:33 |
+| amaterasu | > | 2026-11-02 11:35 |
 | animejs | Implement performant JavaScript web animations, timelines, and SVG morphing with Anime.js. | 2026-09-03 15:33 |
 | antfu-web-design-guidelines | Review UI code for Web Interface Guidelines compliance, accessibility, and UX consistency. | 2026-09-14 10:44 |
 | anti-ai-slop | Unified Anti-Slop Master Engine (Prose, Copywriting, UI/Visual, Code Comments, WCAG Human Accessibility, & Mobile Reflow). Synthesizes anti-ai-slop, anti-ai-slop-writing, and github.com/miqdadbadjuber/anti-slop (antislop, antislop-copywriting, antislop-ui, antislop-code, antislop-human, antislop-layoutmobile). | 2026-09-03 15:33 |
@@ -107,6 +108,7 @@ Total skill: **222**  ·  Di-generate: 2026-10-23 10:40
 | improve-codebase-architecture | Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick. | 2026-09-14 10:44 |
 | inertia-payload-budget | Use when an Inertia page payload is too heavy to ship. | 2026-09-23 16:45 |
 | inspecting-hermes-desktop-dom | Read the live Hermes desktop DOM/CSS over CDP. | 2026-09-03 15:33 |
+| instabox | Manage InstaBox cloud sandboxes (Firecracker microVMs), deploy web applications, configure public HTTPS port ingress, handle 30m idle auto-suspend/resume lifecycles, and execute remote server maintenance via CLI, SDK, and HTTP API. | 2026-10-30 11:43 |
 | invitation-web-pattern | Use when building undangan-style landing or portfolio pages. | 2026-09-14 10:44 |
 | javascript | Write, debug, and optimize modern JavaScript (ES2023+), async event loop, and Node APIs. | 2026-09-14 10:44 |
 | karpathy-guidelines | Behavioral guidelines to reduce common LLM coding mistakes. | 2026-09-03 15:33 |
@@ -168,6 +170,7 @@ Total skill: **222**  ·  Di-generate: 2026-10-23 10:40
 | run-local-web-app | Use when asked to run a local app: serve it and verify. | 2026-09-14 10:44 |
 | safe-code-authoring | Use when writing code via agent tools; empty parens strip. | 2026-09-14 10:44 |
 | safe-local-app-overhaul | Use for safe local app overhauls. | 2026-10-19 16:51 |
+| sanity-anti-hallucination | / | 2026-11-02 11:35 |
 | sap-b1-fdd-author | Generate standard Soltius FDD documentation from SAP B1 source code and DB schemas. Consolidated into enterprise-fdd-master. | 2026-09-04 10:27 |
 | sap-b1-integration-mapper | Use when documenting SAP Business One (SAP B1) integration — Service Layer / OData endpoints, HTTPS calls, B1SESSION/ROUTEID session handling, payl... | 2026-09-03 15:33 |
 | sap-b1-suite | Master SAP Business One SDK & Integration Suite. | 2026-10-01 11:13 |

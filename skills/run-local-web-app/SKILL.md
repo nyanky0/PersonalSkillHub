@@ -102,6 +102,23 @@ Tiga permukaan berbeda, dan salah pilih itu biaya paling mahal di skill ini:
 Urutan yang hemat: cek port dulu (`netstat -ano | grep -E ":(<port>)"`), karena dev server sering **sudah
 hidup** di mesin user — jangan start satu lagi di port berbeda lalu memeriksa app yang salah.
 
+### Higienitas port: bersihkan sampah dulu, jangan menumpuk
+
+User mengeluh kalau server dev lama menumpuk menguasai banyak port. Jadikan rutinitas sebelum tiap start:
+
+1. **Kill berdasarkan pemilik port, lalu verifikasi.** `netstat -ano | grep ':<port> .*LISTENING'` ambil
+   PID-nya → `taskkill /PID <pid> /F` → jalankan netstat lagi dan pastikan LISTENING-nya hilang.
+   `pkill -f <nama-proses>` saja tidak menjamin port bebas — proses yang benar-benar memegang port bisa
+   tidak ter saldo oleh pattern nama.
+2. **Sekali angkut, bukan satu-satu.** Saat sesi berpindah arah (mengganti bundler, port, atau menyudah-kan
+   pekerjaan), bersihkan sekalian semua port yang di-start selama sesi, bukan hanya port yang aktif dipakai.
+3. **Dua sinyal menyedot bahwa port masih dikuasai proses STALE:** `EADDRINUSE` padahal 'sudah di-kill', dan
+   **health probe sukses padahal proses barumu crash saat boot** — yang lama masih hidup dan kamu sedang
+   mengetes server dengan kode lama, jadi hasil tesnya palsu. Selalu pastikan port kosong dulu sebelum start.
+4. **Setelah serangkaian crash/restart jangan percaya `watch`-restart.** Mode watch membangun ulang kode,
+   tapi tidak menjamin tidak ada instance tua yang masih memegang sesi/port. Kill eksplisit → start satu
+   instance bersih → satu attempt per versi kode.
+
 Login ke app yang punya halaman quick-test biasanya lebih cepat lewat tombol auto-fill-nya: klik auto-fill,
 lalu `type` password dengan `submit: true` pada field terakhir. Kalau app punya pemilihan cabang, tekan
 submit-nya dulu — `open`/`goto` ke URL target sebelum cabang aktif akan memantul balik ke halaman pemilihan.
@@ -185,3 +202,6 @@ Glob di dalam komentar blok JS/TS seperti `_npx/*/node_modules` **menutup koment
   hidup di cabang ternary mode, dan remarks bertaut di mode edit vs mode baca.
 - `references/spare-part-browser.md` — layout, server, compiler, dan jebakan mutu data app Spare Parts
   Browser katalog IBT (di bawah `D:\Metrodata\IBT\TEST`).
+- `references/sqlite-fallback-pg-service.md` — menjalankan service Node/Express berdesain PostgreSQL di
+  SQLite saat Docker/Postgres tidak tersedia: wrapper pg-compatible, bedah dialect di tepi, dan jebakan
+  serialisasi driver sqlite3 (Date → epoch string, multi-statement run, nama tabel schema-qualified).
