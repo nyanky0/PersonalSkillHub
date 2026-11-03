@@ -1,6 +1,6 @@
 # SkillHub — MANIFEST Skill
 
-Total skill: **225**  ·  Di-generate: 2026-11-02 11:36
+Total skill: **230**  ·  Di-generate: 2026-11-03 18:56
 
 | Skill | Deskripsi | Terakhir diubah |
 |---|---|---|
@@ -41,6 +41,7 @@ Total skill: **225**  ·  Di-generate: 2026-11-02 11:36
 | brainstorming | You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. | 2026-09-03 15:33 |
 | brand | Brand voice, visual identity, messaging frameworks, asset management, brand consistency. | 2026-09-03 15:33 |
 | brandkit | Design high-end brand identity systems, logo guidelines, and presentation decks. | 2026-09-03 15:33 |
+| browser-automation-master | Master Playwright & Lightpanda browser automation, high-speed AI scraping, CDP orchestration, and MCP integration. | 2026-11-03 15:25 |
 | capacitor-mobile-app | Build Capacitor + Vue 3 + SQLite mobile apps (Android APK). | 2026-09-14 10:44 |
 | caveman-suite | Ultra-compressed communication and review mode cutting output tokens while preserving technical accuracy. | 2026-09-18 17:37 |
 | cf-router-api-testing | Use when testing or wiring CF Router (cfrouter) models. Direct API checks, catalog facts, quota multiples. | 2026-10-01 15:40 |
@@ -145,6 +146,9 @@ Total skill: **225**  ·  Di-generate: 2026-11-02 11:36
 | p5js | p5.js sketches: gen art, shaders, interactive, 3D. | 2026-09-03 15:33 |
 | performance-optimization | Optimize frontend, backend, queries, and database performance; fix N+1 queries. | 2026-09-14 10:44 |
 | plan | Write a markdown plan to .hermes/plans/; no execution. | 2026-09-03 15:33 |
+| playwright-cli | Automate browser interactions, test web pages and work with Playwright tests. | 2026-11-03 18:56 |
+| playwright-component-testing | Set up component testing with Playwright using a story gallery — scaffold stories and a gallery dev page driven by the built-in mount fixture, no dedicated component-testing runtime. Use when asked to test React or Vue components in isolation with Playwright, or to migrate off @playwright/experimental-ct-react / -vue. | 2026-11-03 18:56 |
+| playwright-trace | Inspect Playwright trace files from the command line — list actions, view requests, console, errors, snapshots and screenshots. | 2026-11-03 18:56 |
 | ponytail-suite | Ponytail code review and technical debt auditing framework for surgical refactoring. | 2026-09-18 17:37 |
 | popular-web-designs | 54 real design systems (Stripe, Linear, Vercel) as HTML/CSS. | 2026-09-03 15:33 |
 | powerpoint | Create, read, edit .pptx decks with python-pptx. | 2026-09-03 15:33 |
@@ -183,6 +187,7 @@ Total skill: **225**  ·  Di-generate: 2026-11-02 11:36
 | sertica-web-api | Use when integrating the SERTICA Web API. | 2026-09-14 10:44 |
 | serving-llms-vllm | vLLM: high-throughput LLM serving, OpenAI API, quantization. | 2026-09-03 15:33 |
 | shared-local-mcp-services | Use when sharing a local MCP service across agents. | 2026-10-19 16:51 |
+| simple-english | / | 2026-11-03 18:55 |
 | simplify-code | Parallel 4-agent cleanup of recent code changes. | 2026-09-03 15:33 |
 | sketch | Throwaway HTML mockups: 2-3 design variants to compare. | 2026-09-03 15:33 |
 | skill | > | 2026-10-19 16:51 |
