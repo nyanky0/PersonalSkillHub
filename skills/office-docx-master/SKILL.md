@@ -6,6 +6,7 @@ author: Hermes Agent & Antigravity
 metadata:
   hermes:
     tags: [docx, word, report, python-docx]
+    related_skills: [simple-english, enterprise-fdd-master, office-xlsx-master, office-pdf-master]
 ---
 
 # Office Docx Master

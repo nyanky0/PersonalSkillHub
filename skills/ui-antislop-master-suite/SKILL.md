@@ -8,7 +8,7 @@ platforms: [windows, linux, macos]
 metadata:
   hermes:
     tags: [ui, frontend, antislop, design, tailwind, accessibility, styling, micro-interactions, craft]
-    related_skills: [antislop-ui, anti-ai-slop, ui-styling, make-interfaces-feel-better, antislop-human, antislop-layoutmobile, ui-design-themes, popular-web-designs]
+    related_skills: [antislop-ui, anti-ai-slop, ui-styling, make-interfaces-feel-better, antislop-human, antislop-layoutmobile, ui-design-themes, popular-web-designs, simple-english]
 ---
 
 # UI Anti-Slop Master Suite
@@ -83,3 +83,14 @@ Aturan presisi tingkat mikro untuk memastikan interface terasa responsif, taktil
    - Berikan feedback taktil halus pada `:active`: `transform: scale(0.97)` dengan transisi cepat 100ms.
    - Animasi wajib *interruptible* (jangan pernah mengunci interaksi pengguna saat animasi berjalan).
 
+
+
+---
+
+## 6. Controlled Technical Prose & Documentation (ASD-STE100 / Simple English)
+
+Selain antislop visual dan copywriting UI, prosa teknis dan dokumentasi sistem wajib mematuhi standar **ASD-STE100 Issue 9** melalui skill `simple-english`:
+- **Instruksi Prosedural**: Maksimal 20 kata per kalimat, kalimat imperatif, 1 instruksi per kalimat.
+- **Kondisi Sebelum Perintah**: Format *"Jika [kondisi], lakukan [perintah]"* (contoh: *"If the sync fails, check the log."*).
+- **Eliminasi Kata Hampa AI**: Hapus kata-kata tanpa fakta seperti *"seamlessly"*, *"robust"*, *"crucial"*, *"leverage"*, dan *"not just X, but Y"*.
+- **Register Baku**: Rujuk `references/rule-catalog.md` dan `references/word-swaps.md` di skill `simple-english`.

@@ -7,7 +7,7 @@ metadata:
   hermes:
     tags: [fdd, documentation, sap-b1, laravel, enterprise, flowchart, mockups, validation, black-table, concise-writing, consolidated-all-in-one]
     consolidates: [fdd-generation-workflow, sap-b1-fdd-author, sap-b1-validation-trigger-analyzer, concise-fdd-writing]
-    related_skills: [corporate-flowchart-architect, drawio-skill, office-docx-master, office-xlsx-master]
+    related_skills: [corporate-flowchart-architect, drawio-skill, office-docx-master, office-xlsx-master, simple-english]
 ---
 
 # Enterprise FDD Master Playbook (Unified Single Source of Truth)
@@ -21,7 +21,7 @@ Skill ini merupakan **Master Konsolidasi Tunggal (All-in-One Single Source of Tr
 - Arsitektur Basis Data "Black Table Style" (Bab 3).
 - Taksonomi Validasi Berbasis Kode Unik (`VAL-XXX-NNN`) & Matriks Excel 10-Kolom.
 - **Standar Paten Bab 4 (Design User Interface)**: Pasangan Desktop & Mobile wireframe, posisi ruler bullet (0,63 cm / 1,27 cm), dan captioning baku.
-- **Gaya Penulisan Ultra-Singkat & Anti-AI Slop**: Bahasa lugas, to-the-point, mempertahankan istilah asli SAP B1 & UI bahasa Inggris, mudah dipahami anak-anak.
+- **Gaya Penulisan Ultra-Singkat & Anti-AI Slop (ASD-STE100 / simple-english)**: Bahasa lugas, to-the-point, maksimal 20 kata per instruksi, kondisi sebelum perintah, mempertahankan istilah asli SAP B1 & UI bahasa Inggris, mudah dipahami anak-anak.
 
 ### 5 Pilar Rekayasa FDD Enterprise:
 1. **Reality-First & Zero-Hallucination**: Sumber kebenaran mutlak (*Single Source of Truth*) adalah kenyataan kode program (*codebase*) atau spesifikasi bisnis yang telah diverifikasi secara fisik. Dilarang mengarang form, tombol, endpoint, atau status fiktif.
