@@ -8,7 +8,7 @@ platforms: [windows, linux, macos]
 metadata:
   hermes:
     tags: [ui, frontend, antislop, design, tailwind, accessibility, styling, micro-interactions, craft]
-    related_skills: [antislop-ui, anti-ai-slop, ui-styling, make-interfaces-feel-better, antislop-human, antislop-layoutmobile, ui-design-themes, popular-web-designs, simple-english]
+    related_skills: [antislop-ui, anti-ai-slop, ui-styling, make-interfaces-feel-better, antislop-human, antislop-layoutmobile, ui-design-themes, popular-web-designs, simple-english, appllama-app-design-skill]
 ---
 
 # UI Anti-Slop Master Suite
@@ -94,3 +94,17 @@ Selain antislop visual dan copywriting UI, prosa teknis dan dokumentasi sistem w
 - **Kondisi Sebelum Perintah**: Format *"Jika [kondisi], lakukan [perintah]"* (contoh: *"If the sync fails, check the log."*).
 - **Eliminasi Kata Hampa AI**: Hapus kata-kata tanpa fakta seperti *"seamlessly"*, *"robust"*, *"crucial"*, *"leverage"*, dan *"not just X, but Y"*.
 - **Register Baku**: Rujuk `references/rule-catalog.md` dan `references/word-swaps.md` di skill `simple-english`.
+
+
+---
+
+## 7. Native Mobile Anti-Slop & Build Bar (Appllama Standard)
+
+Untuk antarmuka aplikasi mobile (React Native / Expo / Capacitor / Mobile Web), patuhi standar rekayasa dari skill `appllama-app-design-skill`:
+- **Apple HIG Fidelity & Semantic Tokens**: Wajib gunakan warna semantik platform asli (`systemBackground`, `label`, `separator`), bukan warna heksadesimal statis acak.
+- **Navigasi Semantik & One-Way Doors**:
+  - Gunakan `push` untuk hierarki detail bertingkat.
+  - Gunakan `sheet / modal` untuk task mandiri (creation / editing).
+  - Terapkan *one-way doors*: hilangkan tombol back pada alur krusial (misal layar sukses checkout, pasca-paywall, atau konfirmasi transaksi).
+- **Off-JS Thread Motion Physics**: Semua animasi wajib berjalan di thread native (Reanimated spring physics dengan kecepatan jari nyata), dilarang mengunci thread JavaScript.
+- **Simulator-Verified Loop**: Verifikasi visual wajib diuji langsung pada simulator mobile, mengaudit performa gesture dan transisi layar nyata (bukan sekadar resize browser desktop). Rujuk detail pada sub-panduan `references/motion.md` dan `references/native-controls.md`.

@@ -1,6 +1,6 @@
 # SkillHub — MANIFEST Skill
 
-Total skill: **230**  ·  Di-generate: 2026-11-03 19:15
+Total skill: **232**  ·  Di-generate: 2026-11-04 15:04
 
 | Skill | Deskripsi | Terakhir diubah |
 |---|---|---|
@@ -28,6 +28,7 @@ Total skill: **230**  ·  Di-generate: 2026-11-03 19:15
 | api-gateway | Maton API gateway integration for third-party OAuth and credential-managed API calls. | 2026-09-03 15:53 |
 | apple-notes | Manage Apple Notes via memo CLI: create, search, edit. | 2026-09-23 16:45 |
 | apple-reminders | Apple Reminders via remindctl: add, list, complete. | 2026-09-23 16:45 |
+| appllama-app-design-skill | Build native-feeling, benchmark-quality mobile app screens (Expo / React Native). Use when designing or implementing any mobile UI — screens, flows, onboarding, paywalls, tab bars, sheets, settings, empty states — or when polishing motion, navigation, typography, dark mode, or perceived performance. Enforces Apple HIG fidelity, semantic colors, native controls, anti-slop discipline, navigation semantics (push vs replace, modal vs sheet vs overlay, the one-way doors where back must not exist), purposeful Reanimated motion, a full-motion simulator-verified iteration loop, and a study-real-apps-first workflow (pairs with the Appllama MCP). Trigger on "build a screen", "make this screen better", "design the onboarding", "wire up this flow", "polish the UI", "make it feel native", or any mobile design/implementation task. | 2026-11-04 15:03 |
 | architecture-diagram | Dark-themed SVG architecture/cloud/infra diagrams as HTML. | 2026-09-03 15:33 |
 | arxiv | Search arXiv papers by keyword, author, category, or ID. | 2026-09-03 15:33 |
 | ascii-art | ASCII art: pyfiglet, cowsay, boxes, image-to-ascii. | 2026-09-03 15:33 |
@@ -60,6 +61,7 @@ Total skill: **230**  ·  Di-generate: 2026-11-03 19:15
 | computer-use | Drive the desktop background-first; escalate on signal. | 2026-09-03 15:33 |
 | concise-fdd-writing | Ultra-concise, crystal-clear, anti-AI-slop technical documentation and FDDs. Consolidated into enterprise-fdd-master. | 2026-09-25 17:39 |
 | corporate-flowchart-architect | Master architectural standard for Soltius Corporate Draw.io & FDD Process Flowcharts. Enforces zero-hallucination, strict integer sequential numbering (1..N), decision node blending, semantic mxGraph shapes, Soltius visual styling (#4F88BB), and 4-layer parity (diagram, narrative, FDD script, code). | 2026-09-23 15:50 |
+| craft-anything | Investigate how shipped software works (programs, apps, packages, firmware, web bundles) with evidence-backed answers through the Craft Anything MCP tools, keeping a durable brief, plan, hypotheses, findings and handoff in the project. | 2026-11-04 15:03 |
 | deep-prompt-specification | Author comprehensive, ultra-detailed agentic coding prompts and task specifications blending empirical evidence, strict negative constraints, deep schema definitions, and automated verification loops. | 2026-09-23 13:04 |
 | design | Full design intelligence: brand identity, UI styling, banners, presentations, and design tokens. | 2026-09-03 15:33 |
 | design-md | Author/validate/export Google's DESIGN.md token spec files. | 2026-09-03 15:33 |

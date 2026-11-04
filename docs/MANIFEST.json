@@ -1,7 +1,7 @@
 {
   "hub": "D:\\SkillHub\\skills",
-  "generated": "2026-11-03 19:15:33",
-  "count": 230,
+  "generated": "2026-11-04 15:04:19",
+  "count": 232,
   "skills": [
     {
       "name": "agent-reach",
@@ -122,6 +122,11 @@
       "name": "apple-reminders",
       "description": "Apple Reminders via remindctl: add, list, complete.",
       "changed": "2026-09-23 16:45"
+    },
+    {
+      "name": "appllama-app-design-skill",
+      "description": "Build native-feeling, benchmark-quality mobile app screens (Expo / React Native). Use when designing or implementing any mobile UI — screens, flows, onboarding, paywalls, tab bars, sheets, settings, empty states — or when polishing motion, navigation, typography, dark mode, or perceived performance. Enforces Apple HIG fidelity, semantic colors, native controls, anti-slop discipline, navigation semantics (push vs replace, modal vs sheet vs overlay, the one-way doors where back must not exist), purposeful Reanimated motion, a full-motion simulator-verified iteration loop, and a study-real-apps-first workflow (pairs with the Appllama MCP). Trigger on \"build a screen\", \"make this screen better\", \"design the onboarding\", \"wire up this flow\", \"polish the UI\", \"make it feel native\", or any mobile design/implementation task.",
+      "changed": "2026-11-04 15:03"
     },
     {
       "name": "architecture-diagram",
@@ -282,6 +287,11 @@
       "name": "corporate-flowchart-architect",
       "description": "Master architectural standard for Soltius Corporate Draw.io & FDD Process Flowcharts. Enforces zero-hallucination, strict integer sequential numbering (1..N), decision node blending, semantic mxGraph shapes, Soltius visual styling (#4F88BB), and 4-layer parity (diagram, narrative, FDD script, code).",
       "changed": "2026-09-23 15:50"
+    },
+    {
+      "name": "craft-anything",
+      "description": "Investigate how shipped software works (programs, apps, packages, firmware, web bundles) with evidence-backed answers through the Craft Anything MCP tools, keeping a durable brief, plan, hypotheses, findings and handoff in the project.",
+      "changed": "2026-11-04 15:03"
     },
     {
       "name": "deep-prompt-specification",
