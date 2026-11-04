@@ -107,3 +107,20 @@ Repo ini tunduk pada aturan ketat **Anti-AI-Slop**:
   `	ext
   [YYYY-MM-DD HH:mm:ss] File: <path> | Type: <Bug Fix | Business Logic> | Alasan: <penjelasan>
   `
+
+
+---
+
+## 🧠 Core Agent Mindsets, Personas & System Instructions (gent_mindsets/)
+
+Selain kumpulan modular skills, repository ini juga menampung instruksi dasar (*system prompts*), persona (Miku-chan / Hermes), memori jangka panjang, dan konfigurasi MCP terpusat untuk menjaga paritas lintas agent:
+- **gent_mindsets/gemini/**: GEMINI.md, SOUL.md, MEMORY.md, USER.md
+- **gent_mindsets/antigravity/**: GEMINI.md, mcp_config.json
+- **gent_mindsets/cline_agents/**: AGENTS.md, SOUL.md, MEMORY.md, USER.md
+- **gent_mindsets/hermes/**: SOUL.md, MEMORY.md, USER.md
+- **gent_mindsets/configs/**: gemini_mcp_config.json
+
+Untuk memperbarui seluruh mindset dan instruksi agent secara otomatis dari sistem lokal:
+`ash
+python D:/SkillHub/scripts/backup_agent_mindset.py
+`

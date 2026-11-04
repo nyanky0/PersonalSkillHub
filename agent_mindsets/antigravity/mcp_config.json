@@ -1,0 +1,39 @@
+{
+  "mcpServers": {
+    "nyan-mem": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\yudah\\.nyan-mem\\bridge.cjs"
+      ],
+      "disabled": false
+    },
+    "sequential-thinking": {
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "disabled": false
+    },
+    "context-mode": {
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "context-mode"
+      ],
+      "disabled": false
+    },
+    "playwright": {
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@playwright/mcp@latest"
+      ],
+      "disabled": false
+    }
+  }
+}

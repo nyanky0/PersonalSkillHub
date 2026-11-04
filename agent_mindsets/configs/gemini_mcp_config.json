@@ -1,0 +1,60 @@
+{
+  "mcpServers": {
+    "context-mode": {
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "context-mode"
+      ],
+      "disabled": false
+    },
+    "nyan-mem": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\yudah\\.nyan-mem\\bridge.cjs"
+      ],
+      "disabled": false
+    },
+    "playwright": {
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@playwright/mcp@latest",
+        "--browser",
+        "msedge",
+        "--headless"
+      ],
+      "disabled": false
+    },
+    "lightpanda": {
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu",
+        "--",
+        "bash",
+        "-lic",
+        "~/.local/bin/lightpanda mcp"
+      ],
+      "disabled": false
+    },
+    "sequential-thinking": {
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "disabled": false
+    },
+    "craft-anything": {
+      "args": [
+        "mcp"
+      ],
+      "command": "\\\\?\\C:\\Users\\yudah\\AppData\\Local\\Programs\\CraftAnything\\craft-anything-cli.exe"
+    }
+  }
+}

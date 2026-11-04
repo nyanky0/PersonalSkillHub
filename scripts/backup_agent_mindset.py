@@ -5,13 +5,16 @@ Backs up SOUL.md, GEMINI.md, AGENTS.md, MEMORY.md, and USER.md across:
 - Antigravity 2 / Gemini CLI
 - Antigravity IDE / Cline
 - Hermes Agent
+Also updates git-tracked D:/SkillHub/agent_mindsets directory.
 """
 
 import shutil
 from datetime import datetime
 from pathlib import Path
 
-MINDSET_BACKUP_DIR = Path("D:/SkillHub/agent_mindset_backups")
+SKILLHUB = Path("D:/SkillHub")
+MINDSET_BACKUP_DIR = SKILLHUB / "agent_mindset_backups"
+GIT_TRACKED_DIR = SKILLHUB / "agent_mindsets"
 
 SOURCES = {
     "GEMINI.md": Path("C:/Users/yudah/.gemini/GEMINI.md"),
@@ -26,6 +29,25 @@ SOURCES = {
     "HERMES_SOUL.md": Path("E:/HERMES/SOUL.md"),
     "HERMES_MEMORY.md": Path("E:/HERMES/memories/MEMORY.md"),
     "HERMES_USER.md": Path("E:/HERMES/memories/USER.md"),
+    "configs_gemini_mcp.json": Path("C:/Users/yudah/.gemini/config/mcp_config.json"),
+    "configs_antigravity_mcp.json": Path("C:/Users/yudah/.gemini/antigravity/mcp_config.json"),
+}
+
+GIT_STRUCTURED_SOURCES = {
+    "gemini/GEMINI.md": Path("C:/Users/yudah/.gemini/GEMINI.md"),
+    "gemini/SOUL.md": Path("C:/Users/yudah/.gemini/memories/SOUL.md"),
+    "gemini/MEMORY.md": Path("C:/Users/yudah/.gemini/memories/MEMORY.md"),
+    "gemini/USER.md": Path("C:/Users/yudah/.gemini/memories/USER.md"),
+    "antigravity/GEMINI.md": Path("C:/Users/yudah/.gemini/antigravity/GEMINI.md"),
+    "antigravity/mcp_config.json": Path("C:/Users/yudah/.gemini/antigravity/mcp_config.json"),
+    "cline_agents/AGENTS.md": Path("C:/Users/yudah/.agents/AGENTS.md"),
+    "cline_agents/SOUL.md": Path("C:/Users/yudah/.agents/memories/SOUL.md"),
+    "cline_agents/MEMORY.md": Path("C:/Users/yudah/.agents/memories/MEMORY.md"),
+    "cline_agents/USER.md": Path("C:/Users/yudah/.agents/memories/USER.md"),
+    "hermes/SOUL.md": Path("E:/HERMES/SOUL.md"),
+    "hermes/MEMORY.md": Path("E:/HERMES/memories/MEMORY.md"),
+    "hermes/USER.md": Path("E:/HERMES/memories/USER.md"),
+    "configs/gemini_mcp_config.json": Path("C:/Users/yudah/.gemini/config/mcp_config.json"),
 }
 
 
@@ -65,6 +87,17 @@ def backup_mindset(timestamp_str: str):
     (target_dir / "MANIFEST.md").write_text(manifest_content, encoding="utf-8")
     (MINDSET_BACKUP_DIR / "latest_MANIFEST.md").write_text(manifest_content, encoding="utf-8")
     print(f"\nMindset backup complete in {target_dir} and updated latest_* files.")
+
+    # Also sync to git-tracked agent_mindsets
+    print("\n=== SYNCING TO GIT-TRACKED agent_mindsets ===")
+    GIT_TRACKED_DIR.mkdir(parents=True, exist_ok=True)
+    for rel_path, src_path in GIT_STRUCTURED_SOURCES.items():
+        if src_path.exists():
+            dst = GIT_TRACKED_DIR / rel_path
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src_path, dst)
+            print(f"Synced git-tracked: {rel_path}")
+    print("Git-tracked agent_mindsets updated successfully.")
 
 
 def main():
