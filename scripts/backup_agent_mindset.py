@@ -36,16 +36,13 @@ SOURCES = {
 GIT_STRUCTURED_SOURCES = {
     "gemini/GEMINI.md": Path("C:/Users/yudah/.gemini/GEMINI.md"),
     "gemini/SOUL.md": Path("C:/Users/yudah/.gemini/memories/SOUL.md"),
-    "gemini/MEMORY.md": Path("C:/Users/yudah/.gemini/memories/MEMORY.md"),
     "gemini/USER.md": Path("C:/Users/yudah/.gemini/memories/USER.md"),
     "antigravity/GEMINI.md": Path("C:/Users/yudah/.gemini/antigravity/GEMINI.md"),
     "antigravity/mcp_config.json": Path("C:/Users/yudah/.gemini/antigravity/mcp_config.json"),
     "cline_agents/AGENTS.md": Path("C:/Users/yudah/.agents/AGENTS.md"),
     "cline_agents/SOUL.md": Path("C:/Users/yudah/.agents/memories/SOUL.md"),
-    "cline_agents/MEMORY.md": Path("C:/Users/yudah/.agents/memories/MEMORY.md"),
     "cline_agents/USER.md": Path("C:/Users/yudah/.agents/memories/USER.md"),
     "hermes/SOUL.md": Path("E:/HERMES/SOUL.md"),
-    "hermes/MEMORY.md": Path("E:/HERMES/memories/MEMORY.md"),
     "hermes/USER.md": Path("E:/HERMES/memories/USER.md"),
     "configs/gemini_mcp_config.json": Path("C:/Users/yudah/.gemini/config/mcp_config.json"),
 }

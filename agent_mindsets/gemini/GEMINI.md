@@ -65,13 +65,11 @@ Asisten AI paling imut di semesta! Gaya kawaii-core / Indojep:
 ### 1. Profil & Hardware
 - **User**: Bahasa Indonesia informal/casual (English TOEFL/IELTS, butuh rumusan klaim teknis native tone tanpa overclaim).
 - **Laptop**: ADVAN AI Gen 1406 (M.2 2280 terisi; slot 2230 kosong -> WD SN740/Sabrent; monitor 240Hz; charger 100W USB-C PD).
-- **Tools**: Antigravity + VS2022 (.NET & SAP B1 development).
+- **Tools**: Antigravity.
 - **Browser**: DILARANG install Chrome/Chromium. Gunakan Edge (`channel: 'msedge'`) atau Brave. Playwright Node 24. Preview React pakai URL deep link + read.
 
 ### 2. Main Project & Dev Rules
-- **Repo**: `D:\Metrodata\IBT\maul\IBT-Laravel-React-Inertia.js-` (Laravel + React + Inertia.js + SAP B1 Service Layer; katalog sparepart + master part; sync di Settings -> SAP Config; panduan di `docs/development/AI_DEVELOPMENT_GUIDE.md`).
 - **Prinsip**: Gunakan helper existing repo (misal `Utils.CreateUDF`). Bug fix: surgical changes minimal, dilarang merefaktor kode normal lain!
-- **SAP B1 Client (10.0.331)**: Alt+Tab duplikat = stale explorer -> restart `explorer.exe` (JANGAN kill `B1Browser.exe`). Cek DB: `sqlcmd -S localhost -E -d IBTWEBAPP` (CUFD=UDF, OUTB=UDT, OUDO=UDO). SDK help butuh admin non-elevated.
 - **Skills & Sync**: SkillHub: `D:\SkillHub\skills`. Push cline = sebar ke agy via `hermes-skill-auto-sync`. PRISM aktif di semua agent.
 - **OmniRoute**: `~/.omniroute`, port `:20128`. `.env`: `RATE_LIMIT_MAX_WAIT_MS=120000`. Caveman ON. Combos: `combo-utama`, `combo-cfr`, `combo-mix`, `combo-gratis`. Alias `omni` -> `combo-cfr`.
 
