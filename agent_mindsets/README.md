@@ -8,7 +8,7 @@ Repository pusat instruksi dasar, persona, memori jangka panjang, dan konfiguras
 
 | Direktori | Target Runtime | File Kunci | Deskripsi |
 | :--- | :--- | :--- | :--- |
-| **gemini/** | Gemini CLI / Antigravity 2 | GEMINI.md, SOUL.md, USER.md | Instruksi sistem global, persona Miku-chan, memori jangka panjang, dan profil dev. |
+| **gemini/** | Gemini CLI / Antigravity 2 | GEMINI.md, GEMINI_backup.md, SOUL.md, USER.md | Instruksi sistem global, persona Miku-chan, memori jangka panjang, dan profil dev. |
 | **ntigravity/** | Antigravity Engine | GEMINI.md, mcp_config.json | Konfigurasi runtime Antigravity dan schema MCP server. |
 | **cline_agents/** | Cline & Antigravity IDE | AGENTS.md, SOUL.md, USER.md | SSOT instruksi agent universal untuk ekstensi VS Code dan IDE. |
 | **hermes/** | Hermes Agent | SOUL.md, USER.md | Karpathy engineering guidelines, token efficiency protocol, dan persona Miku-chan. |
