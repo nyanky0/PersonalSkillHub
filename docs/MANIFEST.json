@@ -1,7 +1,7 @@
 {
   "hub": "D:\\SkillHub\\skills",
-  "generated": "2026-11-04 15:04:19",
-  "count": 232,
+  "generated": "2026-11-05 16:56:29",
+  "count": 233,
   "skills": [
     {
       "name": "agent-reach",
@@ -42,6 +42,11 @@
       "name": "amaterasu",
       "description": ">",
       "changed": "2026-11-02 11:35"
+    },
+    {
+      "name": "anatomi-prompt",
+      "description": "Mengubah prompt singkat menjadi master prompt komprehensif dengan 6 elemen inti (Role, Task, Context, Reasoning, Stop conditions, Output) dalam satu blok kode siap salin tanpa mengeksekusi tugasnya secara langsung.",
+      "changed": "2026-11-05 16:55"
     },
     {
       "name": "animejs",

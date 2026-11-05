@@ -1,6 +1,6 @@
 # SkillHub — MANIFEST Skill
 
-Total skill: **232**  ·  Di-generate: 2026-11-04 15:04
+Total skill: **233**  ·  Di-generate: 2026-11-05 16:56
 
 | Skill | Deskripsi | Terakhir diubah |
 |---|---|---|
@@ -12,6 +12,7 @@ Total skill: **232**  ·  Di-generate: 2026-11-04 15:04
 | ai-slop-audit | Advanced AI-slop audit — batch image validation, slop pattern detection, CSS analysis, CTA integrity, auto-report generation. | 2026-09-14 10:44 |
 | airtable | Airtable REST API via curl. Records CRUD, filters, upserts. | 2026-09-03 15:33 |
 | amaterasu | > | 2026-11-02 11:35 |
+| anatomi-prompt | Mengubah prompt singkat menjadi master prompt komprehensif dengan 6 elemen inti (Role, Task, Context, Reasoning, Stop conditions, Output) dalam satu blok kode siap salin tanpa mengeksekusi tugasnya secara langsung. | 2026-11-05 16:55 |
 | animejs | Implement performant JavaScript web animations, timelines, and SVG morphing with Anime.js. | 2026-09-03 15:33 |
 | antfu-web-design-guidelines | Review UI code for Web Interface Guidelines compliance, accessibility, and UX consistency. | 2026-09-14 10:44 |
 | anti-ai-slop | Unified Anti-Slop Master Engine (Prose, Copywriting, UI/Visual, Code Comments, WCAG Human Accessibility, & Mobile Reflow). Synthesizes anti-ai-slop, anti-ai-slop-writing, and github.com/miqdadbadjuber/anti-slop (antislop, antislop-copywriting, antislop-ui, antislop-code, antislop-human, antislop-layoutmobile). | 2026-09-03 15:33 |
